@@ -1,0 +1,635 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8869E08D1EE85FCE00C44B00 /* Optimist_Bd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8869E0831EE85FCE00C44B00 /* Optimist_Bd.ttf */; };
+		8869E08E1EE85FCE00C44B00 /* Optimist_BdIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8869E0841EE85FCE00C44B00 /* Optimist_BdIt.ttf */; };
+		8869E08F1EE85FCE00C44B00 /* Optimist_It.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8869E0851EE85FCE00C44B00 /* Optimist_It.ttf */; };
+		8869E0901EE85FCE00C44B00 /* Optimist_Lt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8869E0861EE85FCE00C44B00 /* Optimist_Lt.ttf */; };
+		8869E0911EE85FCE00C44B00 /* Optimist_LtIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8869E0871EE85FCE00C44B00 /* Optimist_LtIt.ttf */; };
+		8869E0921EE85FCE00C44B00 /* Optimist_Rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8869E0881EE85FCE00C44B00 /* Optimist_Rg.ttf */; };
+		8869E0931EE85FCE00C44B00 /* Optimist_SBd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8869E0891EE85FCE00C44B00 /* Optimist_SBd.ttf */; };
+		8869E0941EE85FCE00C44B00 /* Optimist_SBdIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8869E08A1EE85FCE00C44B00 /* Optimist_SBdIt.ttf */; };
+		8869E0951EE85FCE00C44B00 /* Optimist_XLt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8869E08B1EE85FCE00C44B00 /* Optimist_XLt.ttf */; };
+		8869E0961EE85FCE00C44B00 /* Optimist_XLtIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8869E08C1EE85FCE00C44B00 /* Optimist_XLtIt.ttf */; };
+		8869E0A41EE8728100C44B00 /* AddNearbyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869E0A31EE8728100C44B00 /* AddNearbyTableViewCell.swift */; };
+		8869E0A61EE8729A00C44B00 /* UserGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869E0A51EE8729A00C44B00 /* UserGroupTableViewCell.swift */; };
+		8869E0A91EE8751400C44B00 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869E0A81EE8751400C44B00 /* User.swift */; };
+		8869E0AC1EE87CB300C44B00 /* ManuallyAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869E0AB1EE87CB300C44B00 /* ManuallyAddViewController.swift */; };
+		8869E0AE1EE882D300C44B00 /* AddNearByViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869E0AD1EE882D300C44B00 /* AddNearByViewController.swift */; };
+		8869E0B01EE8843400C44B00 /* FinalizedGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869E0AF1EE8843400C44B00 /* FinalizedGroupViewController.swift */; };
+		8899B6501EE85019000ED279 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8899B64F1EE85019000ED279 /* AppDelegate.swift */; };
+		8899B6521EE85019000ED279 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8899B6511EE85019000ED279 /* ViewController.swift */; };
+		8899B6551EE85019000ED279 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8899B6531EE85019000ED279 /* Main.storyboard */; };
+		8899B6571EE85019000ED279 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8899B6561EE85019000ED279 /* Assets.xcassets */; };
+		8899B65A1EE85019000ED279 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8899B6581EE85019000ED279 /* LaunchScreen.storyboard */; };
+		8899B6651EE85019000ED279 /* carbonhackathonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8899B6641EE85019000ED279 /* carbonhackathonTests.swift */; };
+		8899B6701EE85019000ED279 /* carbonhackathonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8899B66F1EE85019000ED279 /* carbonhackathonUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8899B6611EE85019000ED279 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8899B6441EE85019000ED279 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8899B64B1EE85019000ED279;
+			remoteInfo = carbonhackathon;
+		};
+		8899B66C1EE85019000ED279 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8899B6441EE85019000ED279 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8899B64B1EE85019000ED279;
+			remoteInfo = carbonhackathon;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8869E0831EE85FCE00C44B00 /* Optimist_Bd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Optimist_Bd.ttf; sourceTree = "<group>"; };
+		8869E0841EE85FCE00C44B00 /* Optimist_BdIt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Optimist_BdIt.ttf; sourceTree = "<group>"; };
+		8869E0851EE85FCE00C44B00 /* Optimist_It.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Optimist_It.ttf; sourceTree = "<group>"; };
+		8869E0861EE85FCE00C44B00 /* Optimist_Lt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Optimist_Lt.ttf; sourceTree = "<group>"; };
+		8869E0871EE85FCE00C44B00 /* Optimist_LtIt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Optimist_LtIt.ttf; sourceTree = "<group>"; };
+		8869E0881EE85FCE00C44B00 /* Optimist_Rg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Optimist_Rg.ttf; sourceTree = "<group>"; };
+		8869E0891EE85FCE00C44B00 /* Optimist_SBd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Optimist_SBd.ttf; sourceTree = "<group>"; };
+		8869E08A1EE85FCE00C44B00 /* Optimist_SBdIt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Optimist_SBdIt.ttf; sourceTree = "<group>"; };
+		8869E08B1EE85FCE00C44B00 /* Optimist_XLt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Optimist_XLt.ttf; sourceTree = "<group>"; };
+		8869E08C1EE85FCE00C44B00 /* Optimist_XLtIt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Optimist_XLtIt.ttf; sourceTree = "<group>"; };
+		8869E0A31EE8728100C44B00 /* AddNearbyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddNearbyTableViewCell.swift; path = carbonhackathon/AddNearbyTableViewCell.swift; sourceTree = "<group>"; };
+		8869E0A51EE8729A00C44B00 /* UserGroupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserGroupTableViewCell.swift; path = carbonhackathon/UserGroupTableViewCell.swift; sourceTree = "<group>"; };
+		8869E0A81EE8751400C44B00 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8869E0AB1EE87CB300C44B00 /* ManuallyAddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManuallyAddViewController.swift; sourceTree = "<group>"; };
+		8869E0AD1EE882D300C44B00 /* AddNearByViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNearByViewController.swift; sourceTree = "<group>"; };
+		8869E0AF1EE8843400C44B00 /* FinalizedGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalizedGroupViewController.swift; sourceTree = "<group>"; };
+		8899B64C1EE85019000ED279 /* carbonhackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = carbonhackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8899B64F1EE85019000ED279 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8899B6511EE85019000ED279 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8899B6541EE85019000ED279 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8899B6561EE85019000ED279 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8899B6591EE85019000ED279 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8899B65B1EE85019000ED279 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8899B6601EE85019000ED279 /* carbonhackathonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = carbonhackathonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8899B6641EE85019000ED279 /* carbonhackathonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carbonhackathonTests.swift; sourceTree = "<group>"; };
+		8899B6661EE85019000ED279 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8899B66B1EE85019000ED279 /* carbonhackathonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = carbonhackathonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8899B66F1EE85019000ED279 /* carbonhackathonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carbonhackathonUITests.swift; sourceTree = "<group>"; };
+		8899B6711EE85019000ED279 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8899B6491EE85019000ED279 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8899B65D1EE85019000ED279 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8899B6681EE85019000ED279 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8869E06B1EE85D3F00C44B00 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8869E0A81EE8751400C44B00 /* User.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		8869E06E1EE85F5C00C44B00 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8869E0831EE85FCE00C44B00 /* Optimist_Bd.ttf */,
+				8869E0841EE85FCE00C44B00 /* Optimist_BdIt.ttf */,
+				8869E0851EE85FCE00C44B00 /* Optimist_It.ttf */,
+				8869E0861EE85FCE00C44B00 /* Optimist_Lt.ttf */,
+				8869E0871EE85FCE00C44B00 /* Optimist_LtIt.ttf */,
+				8869E0881EE85FCE00C44B00 /* Optimist_Rg.ttf */,
+				8869E0891EE85FCE00C44B00 /* Optimist_SBd.ttf */,
+				8869E08A1EE85FCE00C44B00 /* Optimist_SBdIt.ttf */,
+				8869E08B1EE85FCE00C44B00 /* Optimist_XLt.ttf */,
+				8869E08C1EE85FCE00C44B00 /* Optimist_XLtIt.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		8869E0A71EE874FE00C44B00 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8869E0A31EE8728100C44B00 /* AddNearbyTableViewCell.swift */,
+				8869E0A51EE8729A00C44B00 /* UserGroupTableViewCell.swift */,
+			);
+			name = Views;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		8869E0AA1EE87C9900C44B00 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8869E0AB1EE87CB300C44B00 /* ManuallyAddViewController.swift */,
+				8869E0AD1EE882D300C44B00 /* AddNearByViewController.swift */,
+				8869E0AF1EE8843400C44B00 /* FinalizedGroupViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		8899B6431EE85019000ED279 = {
+			isa = PBXGroup;
+			children = (
+				8869E06E1EE85F5C00C44B00 /* Resources */,
+				8899B64E1EE85019000ED279 /* carbonhackathon */,
+				8899B6631EE85019000ED279 /* carbonhackathonTests */,
+				8899B66E1EE85019000ED279 /* carbonhackathonUITests */,
+				8899B64D1EE85019000ED279 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8899B64D1EE85019000ED279 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8899B64C1EE85019000ED279 /* carbonhackathon.app */,
+				8899B6601EE85019000ED279 /* carbonhackathonTests.xctest */,
+				8899B66B1EE85019000ED279 /* carbonhackathonUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8899B64E1EE85019000ED279 /* carbonhackathon */ = {
+			isa = PBXGroup;
+			children = (
+				8869E06B1EE85D3F00C44B00 /* Models */,
+				8869E0A71EE874FE00C44B00 /* Views */,
+				8869E0AA1EE87C9900C44B00 /* Controllers */,
+				8899B64F1EE85019000ED279 /* AppDelegate.swift */,
+				8899B6511EE85019000ED279 /* ViewController.swift */,
+				8899B6531EE85019000ED279 /* Main.storyboard */,
+				8899B6561EE85019000ED279 /* Assets.xcassets */,
+				8899B6581EE85019000ED279 /* LaunchScreen.storyboard */,
+				8899B65B1EE85019000ED279 /* Info.plist */,
+			);
+			path = carbonhackathon;
+			sourceTree = "<group>";
+		};
+		8899B6631EE85019000ED279 /* carbonhackathonTests */ = {
+			isa = PBXGroup;
+			children = (
+				8899B6641EE85019000ED279 /* carbonhackathonTests.swift */,
+				8899B6661EE85019000ED279 /* Info.plist */,
+			);
+			path = carbonhackathonTests;
+			sourceTree = "<group>";
+		};
+		8899B66E1EE85019000ED279 /* carbonhackathonUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8899B66F1EE85019000ED279 /* carbonhackathonUITests.swift */,
+				8899B6711EE85019000ED279 /* Info.plist */,
+			);
+			path = carbonhackathonUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8899B64B1EE85019000ED279 /* carbonhackathon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8899B6741EE85019000ED279 /* Build configuration list for PBXNativeTarget "carbonhackathon" */;
+			buildPhases = (
+				8899B6481EE85019000ED279 /* Sources */,
+				8899B6491EE85019000ED279 /* Frameworks */,
+				8899B64A1EE85019000ED279 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = carbonhackathon;
+			productName = carbonhackathon;
+			productReference = 8899B64C1EE85019000ED279 /* carbonhackathon.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8899B65F1EE85019000ED279 /* carbonhackathonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8899B6771EE85019000ED279 /* Build configuration list for PBXNativeTarget "carbonhackathonTests" */;
+			buildPhases = (
+				8899B65C1EE85019000ED279 /* Sources */,
+				8899B65D1EE85019000ED279 /* Frameworks */,
+				8899B65E1EE85019000ED279 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8899B6621EE85019000ED279 /* PBXTargetDependency */,
+			);
+			name = carbonhackathonTests;
+			productName = carbonhackathonTests;
+			productReference = 8899B6601EE85019000ED279 /* carbonhackathonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8899B66A1EE85019000ED279 /* carbonhackathonUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8899B67A1EE85019000ED279 /* Build configuration list for PBXNativeTarget "carbonhackathonUITests" */;
+			buildPhases = (
+				8899B6671EE85019000ED279 /* Sources */,
+				8899B6681EE85019000ED279 /* Frameworks */,
+				8899B6691EE85019000ED279 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8899B66D1EE85019000ED279 /* PBXTargetDependency */,
+			);
+			name = carbonhackathonUITests;
+			productName = carbonhackathonUITests;
+			productReference = 8899B66B1EE85019000ED279 /* carbonhackathonUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8899B6441EE85019000ED279 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Roberts, Andrew";
+				TargetAttributes = {
+					8899B64B1EE85019000ED279 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = N9965BXV48;
+						ProvisioningStyle = Automatic;
+					};
+					8899B65F1EE85019000ED279 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8899B64B1EE85019000ED279;
+					};
+					8899B66A1EE85019000ED279 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8899B64B1EE85019000ED279;
+					};
+				};
+			};
+			buildConfigurationList = 8899B6471EE85019000ED279 /* Build configuration list for PBXProject "carbonhackathon" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8899B6431EE85019000ED279;
+			productRefGroup = 8899B64D1EE85019000ED279 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8899B64B1EE85019000ED279 /* carbonhackathon */,
+				8899B65F1EE85019000ED279 /* carbonhackathonTests */,
+				8899B66A1EE85019000ED279 /* carbonhackathonUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8899B64A1EE85019000ED279 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8869E0921EE85FCE00C44B00 /* Optimist_Rg.ttf in Resources */,
+				8869E08F1EE85FCE00C44B00 /* Optimist_It.ttf in Resources */,
+				8869E0941EE85FCE00C44B00 /* Optimist_SBdIt.ttf in Resources */,
+				8869E08E1EE85FCE00C44B00 /* Optimist_BdIt.ttf in Resources */,
+				8869E0931EE85FCE00C44B00 /* Optimist_SBd.ttf in Resources */,
+				8869E0911EE85FCE00C44B00 /* Optimist_LtIt.ttf in Resources */,
+				8899B65A1EE85019000ED279 /* LaunchScreen.storyboard in Resources */,
+				8869E0901EE85FCE00C44B00 /* Optimist_Lt.ttf in Resources */,
+				8869E0951EE85FCE00C44B00 /* Optimist_XLt.ttf in Resources */,
+				8869E08D1EE85FCE00C44B00 /* Optimist_Bd.ttf in Resources */,
+				8899B6571EE85019000ED279 /* Assets.xcassets in Resources */,
+				8899B6551EE85019000ED279 /* Main.storyboard in Resources */,
+				8869E0961EE85FCE00C44B00 /* Optimist_XLtIt.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8899B65E1EE85019000ED279 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8899B6691EE85019000ED279 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8899B6481EE85019000ED279 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8869E0A41EE8728100C44B00 /* AddNearbyTableViewCell.swift in Sources */,
+				8869E0AC1EE87CB300C44B00 /* ManuallyAddViewController.swift in Sources */,
+				8899B6521EE85019000ED279 /* ViewController.swift in Sources */,
+				8869E0B01EE8843400C44B00 /* FinalizedGroupViewController.swift in Sources */,
+				8869E0AE1EE882D300C44B00 /* AddNearByViewController.swift in Sources */,
+				8869E0A61EE8729A00C44B00 /* UserGroupTableViewCell.swift in Sources */,
+				8869E0A91EE8751400C44B00 /* User.swift in Sources */,
+				8899B6501EE85019000ED279 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8899B65C1EE85019000ED279 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8899B6651EE85019000ED279 /* carbonhackathonTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8899B6671EE85019000ED279 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8899B6701EE85019000ED279 /* carbonhackathonUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8899B6621EE85019000ED279 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8899B64B1EE85019000ED279 /* carbonhackathon */;
+			targetProxy = 8899B6611EE85019000ED279 /* PBXContainerItemProxy */;
+		};
+		8899B66D1EE85019000ED279 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8899B64B1EE85019000ED279 /* carbonhackathon */;
+			targetProxy = 8899B66C1EE85019000ED279 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8899B6531EE85019000ED279 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8899B6541EE85019000ED279 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8899B6581EE85019000ED279 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8899B6591EE85019000ED279 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8899B6721EE85019000ED279 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8899B6731EE85019000ED279 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8899B6751EE85019000ED279 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = N9965BXV48;
+				INFOPLIST_FILE = carbonhackathon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = c1.carbonhackathon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		8899B6761EE85019000ED279 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = N9965BXV48;
+				INFOPLIST_FILE = carbonhackathon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = c1.carbonhackathon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		8899B6781EE85019000ED279 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = carbonhackathonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = c1.carbonhackathonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/carbonhackathon.app/carbonhackathon";
+			};
+			name = Debug;
+		};
+		8899B6791EE85019000ED279 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = carbonhackathonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = c1.carbonhackathonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/carbonhackathon.app/carbonhackathon";
+			};
+			name = Release;
+		};
+		8899B67B1EE85019000ED279 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = carbonhackathonUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = c1.carbonhackathonUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = carbonhackathon;
+			};
+			name = Debug;
+		};
+		8899B67C1EE85019000ED279 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = carbonhackathonUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = c1.carbonhackathonUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = carbonhackathon;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8899B6471EE85019000ED279 /* Build configuration list for PBXProject "carbonhackathon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8899B6721EE85019000ED279 /* Debug */,
+				8899B6731EE85019000ED279 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8899B6741EE85019000ED279 /* Build configuration list for PBXNativeTarget "carbonhackathon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8899B6751EE85019000ED279 /* Debug */,
+				8899B6761EE85019000ED279 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8899B6771EE85019000ED279 /* Build configuration list for PBXNativeTarget "carbonhackathonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8899B6781EE85019000ED279 /* Debug */,
+				8899B6791EE85019000ED279 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8899B67A1EE85019000ED279 /* Build configuration list for PBXNativeTarget "carbonhackathonUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8899B67B1EE85019000ED279 /* Debug */,
+				8899B67C1EE85019000ED279 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8899B6441EE85019000ED279 /* Project object */;
+}
