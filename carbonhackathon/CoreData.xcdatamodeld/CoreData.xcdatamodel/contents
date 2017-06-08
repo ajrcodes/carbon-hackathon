@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="UserEntity" representedClassName="UserEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="fname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phoneNum" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="inGroup" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="UserGroupEntity" inverseName="hasUser" inverseEntity="UserGroupEntity" syncable="YES"/>
+    </entity>
+    <entity name="UserGroupEntity" representedClassName="UserGroupEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="hasUser" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="UserEntity" inverseName="inGroup" inverseEntity="UserEntity" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="UserEntity" positionX="-333" positionY="-18" width="128" height="103"/>
+        <element name="UserGroupEntity" positionX="-2" positionY="54" width="128" height="73"/>
+    </elements>
+</model>

@@ -31,9 +31,19 @@ class User: NSObject {
     
 }
 
-struct userGroup {
+
+class Group {
+    var name: String
+    var users: [User]
     
+    init(name: String) {
+        self.name = name
+        self.users = []
+    }
+}
+
+
+struct userGroup {
     // Fields
     static var users: [User] = []
-    
 }
