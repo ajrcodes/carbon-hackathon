@@ -90,21 +90,16 @@ class DataHelper {
             let object = group as! UserGroupEntity
             // fetch related users for the group
             var users: [User] = []
-            for user in object. {
-                let exerciseEntity = exercise as! ExerciseEntity
-                let exerciseStruct = Exercise(name: exerciseEntity.name!,
-                                              description: exerciseEntity.desc!,
-                                              image: exerciseEntity.image as Data?,
-                                              isRepBased: exerciseEntity.isRepBased,
-                                              numSets: Int(exerciseEntity.numSets),
-                                              numReps: Int(exerciseEntity.numReps))
-                
-                exercises.append(exerciseStruct)
+            for user in object.hasUser! {
+                let userEntity = user as! UserEntity
+                let userStruct = User(firstName: userEntity.fname!, lastName: userEntity.lname!, phoneNumber: userEntity.phoneNum!)
+                users.append(userStruct)
             }
             // then translate the CoreData entity into a struct we can use
-            let workoutStruct = Workout(exercises: exercises, name: object.name!)
-            workouts.append(workoutStruct)
+            let groupStruct = Group(name: object.name!)
+            groupStruct.users = users
+            groups.append(groupStruct)
         }
-        return workouts
+        return groups
     }
 }

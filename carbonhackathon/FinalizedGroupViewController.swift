@@ -26,6 +26,8 @@ class FinalizedGroupViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     @IBAction func createButtonPressed(_ sender: Any) {
+        _ = DataHelper.saveGroupToCoreData(group: userGroup.users)
+        print(DataHelper.retrieveGroupsFromCoreData()[0].users[0].firstName)
     }
     
     @IBAction func cancelButtonPressed(_ sender: Any) {

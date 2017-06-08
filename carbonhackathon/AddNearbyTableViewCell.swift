@@ -39,7 +39,6 @@ class AddNearbyTableViewCell: UITableViewCell {
             // Remove user from group
         }
         
-        
     }
     
     
