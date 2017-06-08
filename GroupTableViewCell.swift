@@ -28,6 +28,9 @@ class GroupTableViewCell: UITableViewCell {
     func setupCell() {
         groupName.text = group.name
         groupDescription.text = group.descrip
+        icon.image = icon.image!.withRenderingMode(.alwaysTemplate)
+        icon.tintColor = .random()
+        
     }
     
     override func awakeFromNib() {

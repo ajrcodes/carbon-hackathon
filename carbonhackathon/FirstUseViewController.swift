@@ -90,10 +90,14 @@ class FirstUseViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
         // Do any additional setup after loading the view.
+        print(UserDefaults.standard.bool(forKey: "hasLaunched"))
         if UserDefaults.standard.bool(forKey: "hasLaunched") {
             DispatchQueue.main.async(execute: {
                 self.performSegue(withIdentifier: "createGroup", sender: nil)
             })
+        } else {
+            UserDefaults.standard.set(true, forKey: "hasLaunched")
+            UserDefaults.standard.synchronize()
         }
     }
 

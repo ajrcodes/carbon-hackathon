@@ -27,6 +27,8 @@ class UserTableViewCell: UITableViewCell {
     func setupCell() {
         userName.text = user.firstName + " " + user.lastName
         userNum.text = formatPhoneNum(phoneNum: user.phoneNumber)
+        icon.image = icon.image!.withRenderingMode(.alwaysTemplate)
+        icon.tintColor = .random()
     }
     
     func formatPhoneNum(phoneNum: String) -> String {
