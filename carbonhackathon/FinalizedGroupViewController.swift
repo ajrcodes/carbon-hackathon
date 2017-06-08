@@ -8,6 +8,8 @@
 
 import UIKit
 
+let baseURL = "https://carbonhackathon.herokuapp.com"
+
 class FinalizedGroupViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     
@@ -16,6 +18,7 @@ class FinalizedGroupViewController: UIViewController, UITableViewDelegate, UITab
     @IBOutlet weak var tableview: UITableView!
     @IBOutlet weak var groupname: UITextField!
     @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var switchy: UISwitch!
     
     // MARK: - IBActions
     
@@ -26,9 +29,11 @@ class FinalizedGroupViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     @IBAction func createButtonPressed(_ sender: Any) {
+        createGroupFromAPI()
     }
     
     @IBAction func cancelButtonPressed(_ sender: Any) {
+        
     }
     
     
@@ -77,6 +82,57 @@ class FinalizedGroupViewController: UIViewController, UITableViewDelegate, UITab
         cell.setupCell()
         
         return cell
+    }
+    
+    func createGroupFromAPI(){
+        
+        var people = [] as Array
+        for user in userGroup.users {
+            people.append([
+                "fname":user.firstName,
+                "lname":user.lastName,
+                "numbers":[
+                    ["type": "cell", "num": user.phoneNumber],
+                ],
+                ])
+        }
+        
+        
+        let dict = [
+            "group": people,
+            "note":textView.text,
+            "mms": switchy.isOn
+            ] as [String: Any]
+        
+        
+        let jsonData = try? JSONSerialization.data(withJSONObject: dict, options: [])
+        
+        
+        let url = URL(string: baseURL + "/api/send-group")!
+        var request = URLRequest(url: url)
+        
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpMethod = "POST"
+        
+        // insert json data to the request
+        request.httpBody = jsonData
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data, error == nil else {
+                print("error on data")
+                print(error?.localizedDescription ?? "No data")
+                return
+            }
+            let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
+            if let responseJSON = responseJSON as? [String: Any] {
+                print("response JSON")
+//                let responseString = responseJSON["data"] as? [String: Any]
+//                print(responseString!)
+            }
+        }
+        task.resume()
+
+        
     }
     
     
