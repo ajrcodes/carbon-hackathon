@@ -79,10 +79,6 @@ class FirstUseViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func viewDidLoad() {
-        if UserDefaults.standard.bool(forKey: "hasLaunched") == true {
-            performSegue(withIdentifier: "createGroup", sender: nil)
-        }
-        
         phoneNum1.delegate = self
         phoneNum1.tag = 1
         
@@ -94,6 +90,11 @@ class FirstUseViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
         // Do any additional setup after loading the view.
+        if UserDefaults.standard.bool(forKey: "hasLaunched") {
+            DispatchQueue.main.async(execute: {
+                self.performSegue(withIdentifier: "createGroup", sender: nil)
+            })
+        }
     }
 
     override func didReceiveMemoryWarning() {

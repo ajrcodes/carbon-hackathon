@@ -34,10 +34,12 @@ class User: NSObject {
 
 class Group {
     var name: String
+    var descrip: String
     var users: [User]
     
-    init(name: String) {
+    init(name: String, descrip: String) {
         self.name = name
+        self.descrip = descrip
         self.users = []
     }
 }
@@ -46,4 +48,5 @@ class Group {
 struct userGroup {
     // Fields
     static var users: [User] = []
+    static var groups: [Group] = []
 }

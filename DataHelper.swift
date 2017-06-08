@@ -19,7 +19,7 @@ class DataHelper {
     
     // MARK: - Save data
     
-    class func saveGroupToCoreData(group: [User]) -> Bool {
+    class func saveGroupToCoreData(group: Group) -> Bool {
         // 1 - setup CoreData stuff
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return false
@@ -27,12 +27,16 @@ class DataHelper {
         let managedContext = appDelegate.persistentContainer.viewContext
         let groupEntity = UserGroupEntity(context: managedContext)
         // Set groupname to random num
-        let randomNum:UInt32 = arc4random_uniform(100) // range is 0 to 99
-        let nameAsString:String = String(randomNum) //string works too
+        let formatter = DateFormatter()
+        formatter.dateStyle = .long
+        formatter.timeStyle = .full
+        let timeString = formatter.string(from: Date())
+        let nameAsString:String = timeString //string works too
         groupEntity.name = nameAsString
+        groupEntity.desc = group.descrip
         
         // 2 - Add users to group relationship
-        for user in group {
+        for user in group.users {
             let userEntity = saveUserToCoreData(user: user)
             userEntity.addToInGroup(groupEntity)
         }
@@ -102,7 +106,7 @@ class DataHelper {
                 users.append(userStruct)
             }
             // then translate the CoreData entity into a struct we can use
-            let groupStruct = Group(name: object.name!)
+            let groupStruct = Group(name: object.name!, descrip: object.desc!)
             groupStruct.users = users
             groups.append(groupStruct)
         }

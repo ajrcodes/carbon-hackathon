@@ -37,6 +37,8 @@
 		8899B65A1EE85019000ED279 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8899B6581EE85019000ED279 /* LaunchScreen.storyboard */; };
 		8899B6651EE85019000ED279 /* carbonhackathonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8899B6641EE85019000ED279 /* carbonhackathonTests.swift */; };
 		8899B6701EE85019000ED279 /* carbonhackathonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8899B66F1EE85019000ED279 /* carbonhackathonUITests.swift */; };
+		88C4A1151EE9802100310A6D /* ShowGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C4A1141EE9802100310A6D /* ShowGroupsViewController.swift */; };
+		88C4A1171EE9805500310A6D /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C4A1161EE9805500310A6D /* GroupTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +95,8 @@
 		8899B66B1EE85019000ED279 /* carbonhackathonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = carbonhackathonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8899B66F1EE85019000ED279 /* carbonhackathonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carbonhackathonUITests.swift; sourceTree = "<group>"; };
 		8899B6711EE85019000ED279 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88C4A1141EE9802100310A6D /* ShowGroupsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowGroupsViewController.swift; sourceTree = "<group>"; };
+		88C4A1161EE9805500310A6D /* GroupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +155,7 @@
 			children = (
 				8869E0A31EE8728100C44B00 /* AddNearbyTableViewCell.swift */,
 				8869E0A51EE8729A00C44B00 /* UserGroupTableViewCell.swift */,
+				88C4A1161EE9805500310A6D /* GroupTableViewCell.swift */,
 			);
 			name = Views;
 			path = ..;
@@ -164,6 +169,7 @@
 				8869E0AD1EE882D300C44B00 /* AddNearByViewController.swift */,
 				8869E0AB1EE87CB300C44B00 /* ManuallyAddViewController.swift */,
 				8869E0AF1EE8843400C44B00 /* FinalizedGroupViewController.swift */,
+				88C4A1141EE9802100310A6D /* ShowGroupsViewController.swift */,
 				8869E0B51EE8B3C000C44B00 /* Slide Menu */,
 			);
 			name = Controllers;
@@ -392,6 +398,8 @@
 				8869E0A41EE8728100C44B00 /* AddNearbyTableViewCell.swift in Sources */,
 				8869E0B41EE8AD5200C44B00 /* MenuViewController.swift in Sources */,
 				8869E0AC1EE87CB300C44B00 /* ManuallyAddViewController.swift in Sources */,
+				88C4A1171EE9805500310A6D /* GroupTableViewCell.swift in Sources */,
+				88C4A1151EE9802100310A6D /* ShowGroupsViewController.swift in Sources */,
 				8869E0C51EE9069D00C44B00 /* DataHelper.swift in Sources */,
 				8869E0C31EE905F500C44B00 /* CoreData.xcdatamodeld in Sources */,
 				8899B6521EE85019000ED279 /* ViewController.swift in Sources */,
