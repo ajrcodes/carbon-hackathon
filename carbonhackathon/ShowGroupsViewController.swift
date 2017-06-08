@@ -60,7 +60,6 @@ class ShowGroupsViewController: UIViewController, UITableViewDelegate, UITableVi
         cell.group = groups[indexPath.row]
         cell.delegate = self
         cell.setupCell()
-        print(groups[indexPath.row].name + groups[indexPath.row].descrip)
         
         return cell
     }
@@ -71,16 +70,15 @@ class ShowGroupsViewController: UIViewController, UITableViewDelegate, UITableVi
         let currentCell = tableView.cellForRow(at: indexPath)! as! GroupTableViewCell
         
         valueToPass = currentCell.group
-        performSegue(withIdentifier: "showUsersFromGroup", sender: nil)
     }
     
     func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
         
         if (segue.identifier == "showUsersFromGroup") {
             // initialize new view controller and cast it as your view controller
-            var viewController = segue.destination as! ShowUsersTableViewController
+            let viewController = segue.destination as! ShowUsersViewController
             // your new view controller should have property that will store passed value
-            
+            viewController.group = valueToPass
         }
     }
 

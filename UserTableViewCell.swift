@@ -13,7 +13,6 @@ class UserTableViewCell: UITableViewCell {
     // MARK: - Fields
     
     var user: User = User()
-    var delegate: ShowUsersTableViewController = ShowUsersTableViewController()
     
     
     // MARK: - IBOutlets

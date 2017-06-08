@@ -1061,7 +1061,7 @@
         <!--Show Users-->
         <scene sceneID="Ii3-3p-XSc">
             <objects>
-                <viewController storyboardIdentifier="showUsers" title="Show Users" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7T0-bg-xcM" customClass="ShowGroupsViewController" customModule="carbonhackathon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="showUsers" title="Show Users" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7T0-bg-xcM" customClass="ShowUsersViewController" customModule="carbonhackathon" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cMH-cp-hJZ"/>
                         <viewControllerLayoutGuide type="bottom" id="VUc-tq-8tp"/>
@@ -1150,7 +1150,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="tableview" destination="gFq-co-ZYT" id="sNY-A5-ppj"/>
+                        <outlet property="tableview" destination="gFq-co-ZYT" id="KRR-C7-Lqz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uhO-tR-BRY" userLabel="First Responder" sceneMemberID="firstResponder"/>

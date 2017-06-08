@@ -108,7 +108,7 @@ class DataHelper {
     }
     
     
-    class func retrieveGroupsFromCoreData() -> Group {
+    class func retrieveUsersFromCoreData(group: Group) -> [User] {
         //1 - setup context
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return []
@@ -118,29 +118,29 @@ class DataHelper {
         //2 - make fetch request
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "UserGroupEntity")
         var fetchArray: [NSManagedObject] = []
+        let predicate = NSPredicate(format: "name == %@", group.name)
+        fetchRequest.predicate = predicate
         do {
             fetchArray = try managedContext.fetch(fetchRequest)
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
         
-        //3 - translate fetch request into array of structs
-        var groups: [Group] = []
-        
-        for group in fetchArray {
-            let object = group as! UserGroupEntity
-            // fetch related users for the group
-            var users: [User] = []
-            for user in object.hasUser! {
-                let userEntity = user as! UserEntity
-                let userStruct = User(firstName: userEntity.fname!, lastName: userEntity.lname!, phoneNumber: userEntity.phoneNum!)
-                users.append(userStruct)
-            }
-            // then translate the CoreData entity into a struct we can use
-            let groupStruct = Group(name: object.name!, descrip: object.desc!)
-            groupStruct.users = users
-            groups.append(groupStruct)
+        // if there's a group saved, use it, otherwise return a nil optional
+        let groupObject: UserGroupEntity
+        if fetchArray.count == 0 {
+            return []
+        } else {
+            groupObject = fetchArray.last as! UserGroupEntity
         }
-        return groups
+        
+        //3 - get associated workouts
+        var users: [User] = []
+        for user in groupObject.hasUser! {
+            let userEntity = user as! UserEntity
+            let userStruct = User(firstName: userEntity.fname!, lastName: userEntity.lname!, phoneNumber: userEntity.phoneNum!)
+            users.append(userStruct)
+        }
+        return users
     }
 }
