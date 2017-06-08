@@ -15,6 +15,7 @@ class FinalizedGroupViewController: UIViewController, UITableViewDelegate, UITab
     
     @IBOutlet weak var tableview: UITableView!
     @IBOutlet weak var groupname: UITextField!
+    @IBOutlet weak var textView: UITextView!
     
     
     // MARK: - Lifecycle
@@ -26,8 +27,14 @@ class FinalizedGroupViewController: UIViewController, UITableViewDelegate, UITab
     
     override func viewDidLoad() {
         tableViewSetup()
+        self.hideKeyboardWhenTappedAround()
         super.viewDidLoad()
     
+        // setup rounded edges on textView
+        textView.layer.cornerRadius = 5
+        textView.layer.borderColor = UIColor.gray.withAlphaComponent(0.5).cgColor
+        textView.layer.borderWidth = 0.5
+        textView.clipsToBounds = true
         // Do any additional setup after loading the view.
     }
 

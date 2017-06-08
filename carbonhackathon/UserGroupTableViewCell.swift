@@ -16,6 +16,12 @@ class UserGroupTableViewCell: UITableViewCell {
     @IBOutlet weak var phoneNumber: UILabel!
     @IBOutlet weak var name: UILabel!
     
+    @IBAction func deletePressed(_ sender: Any) {
+        userGroup.users.remove(at: user.index)
+        delegate.tableview.reloadData()
+    }
+    
+    
     func setupCell() {
         name.text = user.firstName + " " + user.lastName
         phoneNumber.text = user.phoneNumber

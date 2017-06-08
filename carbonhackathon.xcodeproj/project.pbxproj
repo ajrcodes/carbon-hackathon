@@ -23,6 +23,10 @@
 		8869E0AC1EE87CB300C44B00 /* ManuallyAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869E0AB1EE87CB300C44B00 /* ManuallyAddViewController.swift */; };
 		8869E0AE1EE882D300C44B00 /* AddNearByViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869E0AD1EE882D300C44B00 /* AddNearByViewController.swift */; };
 		8869E0B01EE8843400C44B00 /* FinalizedGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869E0AF1EE8843400C44B00 /* FinalizedGroupViewController.swift */; };
+		8869E0B31EE8AD5200C44B00 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869E0B11EE8AD5200C44B00 /* BaseViewController.swift */; };
+		8869E0B41EE8AD5200C44B00 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869E0B21EE8AD5200C44B00 /* MenuViewController.swift */; };
+		8869E0B81EE8B4DE00C44B00 /* FirstUseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869E0B71EE8B4DE00C44B00 /* FirstUseViewController.swift */; };
+		8869E0BA1EE8BC8A00C44B00 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869E0B91EE8BC8A00C44B00 /* EditProfileViewController.swift */; };
 		8899B6501EE85019000ED279 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8899B64F1EE85019000ED279 /* AppDelegate.swift */; };
 		8899B6521EE85019000ED279 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8899B6511EE85019000ED279 /* ViewController.swift */; };
 		8899B6551EE85019000ED279 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8899B6531EE85019000ED279 /* Main.storyboard */; };
@@ -66,6 +70,10 @@
 		8869E0AB1EE87CB300C44B00 /* ManuallyAddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManuallyAddViewController.swift; sourceTree = "<group>"; };
 		8869E0AD1EE882D300C44B00 /* AddNearByViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNearByViewController.swift; sourceTree = "<group>"; };
 		8869E0AF1EE8843400C44B00 /* FinalizedGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalizedGroupViewController.swift; sourceTree = "<group>"; };
+		8869E0B11EE8AD5200C44B00 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		8869E0B21EE8AD5200C44B00 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		8869E0B71EE8B4DE00C44B00 /* FirstUseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstUseViewController.swift; sourceTree = "<group>"; };
+		8869E0B91EE8BC8A00C44B00 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		8899B64C1EE85019000ED279 /* carbonhackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = carbonhackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8899B64F1EE85019000ED279 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8899B6511EE85019000ED279 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -144,11 +152,23 @@
 		8869E0AA1EE87C9900C44B00 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8869E0AB1EE87CB300C44B00 /* ManuallyAddViewController.swift */,
+				8869E0B71EE8B4DE00C44B00 /* FirstUseViewController.swift */,
+				8869E0B91EE8BC8A00C44B00 /* EditProfileViewController.swift */,
 				8869E0AD1EE882D300C44B00 /* AddNearByViewController.swift */,
+				8869E0AB1EE87CB300C44B00 /* ManuallyAddViewController.swift */,
 				8869E0AF1EE8843400C44B00 /* FinalizedGroupViewController.swift */,
+				8869E0B51EE8B3C000C44B00 /* Slide Menu */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		8869E0B51EE8B3C000C44B00 /* Slide Menu */ = {
+			isa = PBXGroup;
+			children = (
+				8869E0B11EE8AD5200C44B00 /* BaseViewController.swift */,
+				8869E0B21EE8AD5200C44B00 /* MenuViewController.swift */,
+			);
+			name = "Slide Menu";
 			sourceTree = "<group>";
 		};
 		8899B6431EE85019000ED279 = {
@@ -352,13 +372,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				8869E0A41EE8728100C44B00 /* AddNearbyTableViewCell.swift in Sources */,
+				8869E0B41EE8AD5200C44B00 /* MenuViewController.swift in Sources */,
 				8869E0AC1EE87CB300C44B00 /* ManuallyAddViewController.swift in Sources */,
 				8899B6521EE85019000ED279 /* ViewController.swift in Sources */,
 				8869E0B01EE8843400C44B00 /* FinalizedGroupViewController.swift in Sources */,
 				8869E0AE1EE882D300C44B00 /* AddNearByViewController.swift in Sources */,
+				8869E0B31EE8AD5200C44B00 /* BaseViewController.swift in Sources */,
 				8869E0A61EE8729A00C44B00 /* UserGroupTableViewCell.swift in Sources */,
+				8869E0BA1EE8BC8A00C44B00 /* EditProfileViewController.swift in Sources */,
 				8869E0A91EE8751400C44B00 /* User.swift in Sources */,
 				8899B6501EE85019000ED279 /* AppDelegate.swift in Sources */,
+				8869E0B81EE8B4DE00C44B00 /* FirstUseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

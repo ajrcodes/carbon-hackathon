@@ -1,5 +1,5 @@
 //
-//  ManuallyAddViewController.swift
+//  FirstUseViewController.swift
 //  carbonhackathon
 //
 //  Created by Roberts, Andrew on 6/7/17.
@@ -8,19 +8,7 @@
 
 import UIKit
 
-extension UIViewController {
-    func hideKeyboardWhenTappedAround() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
-        tap.cancelsTouchesInView = false
-        view.addGestureRecognizer(tap)
-    }
-    
-    func dismissKeyboard() {
-        view.endEditing(true)
-    }
-}
-
-class ManuallyAddViewController: BaseViewController, UITextFieldDelegate {
+class FirstUseViewController: UIViewController, UITextFieldDelegate {
 
     // MARK: - IBOutlets
     
@@ -33,24 +21,31 @@ class ManuallyAddViewController: BaseViewController, UITextFieldDelegate {
     
     // MARK: - IBActions
     
-    @IBAction func addAnother(_ sender: Any) {
+    @IBAction func getStartedPressed(_ sender: Any) {
         if firstName.text == "" || lastName.text == ""
-        || phoneNum1.text!.characters.count < 3 || phoneNum2.text!.characters.count < 3 || phoneNum3.text!.characters.count < 4 {
+            || phoneNum1.text!.characters.count < 3 || phoneNum2.text!.characters.count < 3 || phoneNum3.text!.characters.count < 4 {
             let alert = UIAlertController(title: "Warning!", message: "Please complete all the fields", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
         else {
+            // create and add user object to global list
             let currentUser = User(firstName: firstName.text!, lastName: lastName.text!, phoneNumber: getPhoneNumber(), index: userGroup.users.count)
-
+            
             userGroup.users.append(currentUser)
+            
+            // save defaults in UserDefaults for future application launches
+            UserDefaults.standard.set(firstName.text!, forKey: "firstName")
+            UserDefaults.standard.set(lastName.text!, forKey: "lastName")
+            UserDefaults.standard.set(getPhoneNumber(), forKey: "phoneNum")
+            
+            // reset inputs
             firstName.text = ""
             lastName.text = ""
             phoneNum1.text = ""
             phoneNum2.text = ""
             phoneNum3.text = ""
         }
-        
     }
     
     
@@ -84,6 +79,10 @@ class ManuallyAddViewController: BaseViewController, UITextFieldDelegate {
     }
     
     override func viewDidLoad() {
+        if UserDefaults.standard.bool(forKey: "hasLaunched") == true {
+            performSegue(withIdentifier: "createGroup", sender: nil)
+        }
+        
         phoneNum1.delegate = self
         phoneNum1.tag = 1
         
@@ -92,10 +91,8 @@ class ManuallyAddViewController: BaseViewController, UITextFieldDelegate {
         
         phoneNum3.delegate = self
         phoneNum3.tag = 3
-        
         super.viewDidLoad()
-        self.addSlideMenuButton()
-        self.hideKeyboardWhenTappedAround()
+
         // Do any additional setup after loading the view.
     }
 
