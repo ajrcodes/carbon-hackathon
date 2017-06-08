@@ -191,7 +191,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1449" y="976"/>
+            <point key="canvasLocation" x="682" y="976"/>
         </scene>
         <!--Add Nearby-->
         <scene sceneID="hho-73-Mjn">
@@ -246,9 +246,9 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JRn-4I-duO">
-                                                    <rect key="frame" x="236" y="19.5" width="35" height="35"/>
+                                                    <rect key="frame" x="211" y="19.5" width="60" height="35"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="35" id="Y6H-b2-ZOm"/>
+                                                        <constraint firstAttribute="width" constant="60" id="Y6H-b2-ZOm"/>
                                                         <constraint firstAttribute="height" constant="35" id="wen-0z-d92"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
@@ -292,14 +292,15 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6SD-Tn-Wwj">
-                                <rect key="frame" x="41" y="579" width="99" height="33"/>
+                                <rect key="frame" x="41" y="579" width="67" height="33"/>
                                 <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="16"/>
-                                <state key="normal" title="Add Selected">
+                                <state key="normal" title="Continue">
                                     <color key="titleColor" red="0.32249286770000002" green="0.58990800379999997" blue="0.8353716135" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
                                     <action selector="addSelectedPressed:" destination="FL4-lf-8g7" eventType="touchUpInside" id="TW6-j1-KNg"/>
                                     <action selector="createButtonPressed:" destination="h1w-qM-bvm" eventType="touchUpInside" id="CkF-ML-edY"/>
+                                    <segue destination="kno-zn-fpo" kind="show" id="Lju-0I-Efa"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -316,16 +317,14 @@
                             <constraint firstItem="oF3-a6-LYf" firstAttribute="top" secondItem="f4p-w0-reB" secondAttribute="bottom" constant="25" id="xT9-Ax-nSo"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Nearby" id="nNb-hl-EQp">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="edit" id="UHl-LA-dAv"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Add Nearby" id="nNb-hl-EQp"/>
                     <connections>
                         <outlet property="tableview" destination="oF3-a6-LYf" id="xS4-tM-AeH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LAG-Yg-xJ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3377" y="1773"/>
+            <point key="canvasLocation" x="2641" y="1594"/>
         </scene>
         <!--Create Group-->
         <scene sceneID="4T8-rc-KF0">
@@ -505,7 +504,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0rF-dC-Fjl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3378" y="976"/>
+            <point key="canvasLocation" x="3727" y="976"/>
         </scene>
         <!--Finalize Group-->
         <scene sceneID="wP8-Di-C33">
@@ -763,7 +762,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A7d-xd-0M0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1449" y="1739"/>
+            <point key="canvasLocation" x="1118" y="1756"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="M2f-PR-QQm">
@@ -776,16 +775,16 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="kno-zn-fpo" kind="relationship" relationship="rootViewController" id="hvO-HR-Yf7"/>
                         <segue destination="gGA-A4-b9i" kind="show" id="1IA-Dq-ymW"/>
                         <segue destination="pEH-Gf-krf" kind="show" id="DiD-Bo-Czj"/>
-                        <segue destination="FL4-lf-8g7" kind="show" id="zPl-Jc-MBY"/>
                         <segue destination="8Eg-2v-t3W" kind="show" id="ZDl-3X-D41"/>
+                        <segue destination="kno-zn-fpo" kind="relationship" relationship="rootViewController" id="snv-TJ-Q99"/>
+                        <segue destination="FL4-lf-8g7" kind="show" id="lUv-PX-blQ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q1y-d6-NAo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2286" y="976"/>
+            <point key="canvasLocation" x="1615" y="976"/>
         </scene>
         <!--Edit Profile-->
         <scene sceneID="1C2-L6-787">
@@ -959,7 +958,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h1Z-as-sRu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2286" y="1812"/>
+            <point key="canvasLocation" x="1822" y="1778"/>
         </scene>
         <!--Show Groups-->
         <scene sceneID="WH6-fP-79l">
@@ -1230,7 +1229,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tZt-h5-kcG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1807" y="70"/>
+            <point key="canvasLocation" x="1966" y="-64"/>
         </scene>
     </scenes>
     <resources>
@@ -1240,6 +1239,7 @@
         <image name="blackring" width="225" height="225"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Lju-0I-Efa"/>
         <segue reference="3jd-Fc-XtH"/>
     </inferredMetricsTieBreakers>
 </document>

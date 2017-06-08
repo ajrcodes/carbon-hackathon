@@ -27,15 +27,12 @@ class AddNearbyTableViewCell: UITableViewCell {
     // MARK: - IBActions
     
     @IBAction func selectorPressed(_ sender: Any) {
-        if addedToGroup {
-            addedToGroup = false
-            selectorIcon.setTitle("+", for: .normal)
-            self.backgroundColor = UIColor.white
-        }
-        else {
+        if !addedToGroup {
             addedToGroup = true
-            selectorIcon.setTitle("-", for: .normal)
-            self.backgroundColor = UIColor.green
+            userGroup.users.append(user)
+            selectorIcon.setTitle("Done!", for: [])
+            selectorIcon.isEnabled = false
+            self.backgroundColor = UIColor.white
         }
     }
     
@@ -43,7 +40,7 @@ class AddNearbyTableViewCell: UITableViewCell {
     // MARK: - Lifecycle
     
     func setupCell() {
-        name.text = user.firstName + user.lastName
+        name.text = user.firstName + " " + user.lastName
         phoneNumber.text = user.phoneNumber
     }
     

@@ -16,9 +16,11 @@ class AddNearByViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var tableview: UITableView!
     
     @IBAction func addSelectedPressed(_ sender: Any) {
+
     }
     
     @IBAction func cancelSelectedPressed(_ sender: Any) {
+        //stop timer
     }
     
     let interval:Int = 2 // 2 seconds
@@ -34,15 +36,13 @@ class AddNearByViewController: UIViewController, UITableViewDelegate, UITableVie
         super.viewDidLoad()
         tableViewSetup()
         //locManager.requestWhenInUseAuthorization()
-        
-        //set timer
+    
         let updateTimer = Timer.scheduledTimer(timeInterval: TimeInterval(interval), target: self, selector: #selector(self.sendLocation), userInfo: nil, repeats: true)
         
         //run timer immediately
         RunLoop.current.add(updateTimer, forMode: RunLoopMode.commonModes)
         
-        //stop timer
-        //updateTimer.invalidate()
+    
         
         // Do any additional setup after loading the view.
         //sendLocation()
