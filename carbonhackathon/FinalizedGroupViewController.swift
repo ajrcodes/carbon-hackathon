@@ -17,6 +17,20 @@ class FinalizedGroupViewController: UIViewController, UITableViewDelegate, UITab
     @IBOutlet weak var groupname: UITextField!
     @IBOutlet weak var textView: UITextView!
     
+    // MARK: - IBActions
+    
+    @IBAction func infoButtonPressed(_ sender: Any) {
+        let alert = UIAlertController(title: "Contact Card Enabled", message: "If enabled, our service will send contact information as vCards via MMS.  This can take longer than traditional SMS, but it will save a click when received.", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func createButtonPressed(_ sender: Any) {
+    }
+    
+    @IBAction func cancelButtonPressed(_ sender: Any) {
+    }
+    
     
     // MARK: - Lifecycle
     
@@ -59,6 +73,7 @@ class FinalizedGroupViewController: UIViewController, UITableViewDelegate, UITab
         // setup the cell to be used in the table view
         cell.user = userGroup.users[indexPath.row]
         cell.delegate = self
+        cell.index = indexPath.row
         cell.setupCell()
         
         return cell

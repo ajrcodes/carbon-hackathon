@@ -526,50 +526,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Edh-kQ-wS8">
-                                <rect key="frame" x="41" y="89" width="31.5" height="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Card Enabled" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Edh-kQ-wS8">
+                                <rect key="frame" x="41" y="89" width="114.5" height="16"/>
                                 <fontDescription key="fontDescription" name="Optimist-Regular" family="Optimist" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYO-LL-5OE">
-                                <rect key="frame" x="41" y="155" width="61" height="16"/>
+                                <rect key="frame" x="41" y="130" width="61" height="16"/>
                                 <fontDescription key="fontDescription" name="Optimist-Regular" family="Optimist" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a group name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NN3-nH-ZD4">
-                                <rect key="frame" x="41" y="110" width="293" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8m-9O-cio">
-                                <rect key="frame" x="260" y="571" width="49" height="33"/>
+                                <rect key="frame" x="260" y="546" width="49" height="33"/>
                                 <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="16"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" red="0.8381381630897522" green="0.34255543351173401" blue="0.27056044340133667" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="h1w-qM-bvm" eventType="touchUpInside" id="OKD-p1-vnd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0On-aj-ioV">
-                                <rect key="frame" x="66" y="571" width="50" height="33"/>
+                                <rect key="frame" x="66" y="546" width="50" height="33"/>
                                 <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="16"/>
                                 <state key="normal" title="Create">
                                     <color key="titleColor" red="0.32249286770000002" green="0.58990800379999997" blue="0.8353716135" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="createButtonPressed:" destination="h1w-qM-bvm" eventType="touchUpInside" id="SIb-Q1-cgC"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nVe-FA-rzS">
-                                <rect key="frame" x="41" y="176" width="293" height="60"/>
+                                <rect key="frame" x="41" y="151" width="293" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="tko-S8-8uJ"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uk5-Dg-rBZ">
-                                <rect key="frame" x="21" y="251" width="318" height="300"/>
+                                <rect key="frame" x="21" y="226" width="318" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="Bss-UX-gOK"/>
@@ -634,30 +633,39 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EK5-GZ-Vid">
+                                <rect key="frame" x="260" y="82" width="51" height="31"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eup-9T-McY">
+                                <rect key="frame" x="160.5" y="86" width="22" height="22"/>
+                                <connections>
+                                    <action selector="infoButtonPressed:" destination="h1w-qM-bvm" eventType="touchUpInside" id="baS-0I-NjK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="0On-aj-ioV" firstAttribute="leading" secondItem="isD-Py-o1v" secondAttribute="leadingMargin" constant="50" id="1yt-VA-esl"/>
-                            <constraint firstItem="NN3-nH-ZD4" firstAttribute="leading" secondItem="Edh-kQ-wS8" secondAttribute="leading" id="5U4-AT-0Bn"/>
                             <constraint firstItem="uk5-Dg-rBZ" firstAttribute="top" secondItem="nVe-FA-rzS" secondAttribute="bottom" constant="15" id="6c4-Bi-0d7"/>
                             <constraint firstItem="d8m-9O-cio" firstAttribute="centerY" secondItem="0On-aj-ioV" secondAttribute="centerY" id="9RR-nt-sXg"/>
-                            <constraint firstItem="NN3-nH-ZD4" firstAttribute="top" secondItem="Edh-kQ-wS8" secondAttribute="bottom" constant="5" id="FOo-1U-kzz"/>
                             <constraint firstItem="Edh-kQ-wS8" firstAttribute="top" secondItem="pEb-tt-Qd4" secondAttribute="bottom" constant="25" id="Jh6-ra-9Ux"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="NN3-nH-ZD4" secondAttribute="trailing" constant="25" id="Oc7-lt-MbN"/>
-                            <constraint firstItem="uk5-Dg-rBZ" firstAttribute="leading" secondItem="NN3-nH-ZD4" secondAttribute="leading" constant="-20" id="QHx-Mk-ESA"/>
+                            <constraint firstItem="uk5-Dg-rBZ" firstAttribute="leading" secondItem="cYO-LL-5OE" secondAttribute="leading" constant="-20" id="SsL-ez-J5h"/>
+                            <constraint firstItem="eup-9T-McY" firstAttribute="centerY" secondItem="Edh-kQ-wS8" secondAttribute="centerY" id="VNQ-MQ-Mvp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nVe-FA-rzS" secondAttribute="trailing" constant="25" id="a1G-Iu-RDR"/>
+                            <constraint firstItem="EK5-GZ-Vid" firstAttribute="centerX" secondItem="d8m-9O-cio" secondAttribute="centerX" id="aBu-41-jgP"/>
                             <constraint firstItem="cYO-LL-5OE" firstAttribute="leading" secondItem="Edh-kQ-wS8" secondAttribute="leading" id="d9G-Nf-rYB"/>
                             <constraint firstItem="Edh-kQ-wS8" firstAttribute="leading" secondItem="isD-Py-o1v" secondAttribute="leadingMargin" constant="25" id="eD4-Rz-NJD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="uk5-Dg-rBZ" secondAttribute="trailing" constant="20" id="g4h-Lw-HkK"/>
+                            <constraint firstItem="EK5-GZ-Vid" firstAttribute="centerY" secondItem="eup-9T-McY" secondAttribute="centerY" id="goU-gX-pHv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="d8m-9O-cio" secondAttribute="trailing" constant="50" id="h4c-Sz-lJk"/>
+                            <constraint firstItem="eup-9T-McY" firstAttribute="leading" secondItem="Edh-kQ-wS8" secondAttribute="trailing" constant="5" id="imh-UL-bcV"/>
                             <constraint firstItem="nVe-FA-rzS" firstAttribute="leading" secondItem="cYO-LL-5OE" secondAttribute="leading" id="r0g-K5-MsL"/>
                             <constraint firstItem="nVe-FA-rzS" firstAttribute="top" secondItem="cYO-LL-5OE" secondAttribute="bottom" constant="5" id="rgd-BV-SMy"/>
-                            <constraint firstItem="cYO-LL-5OE" firstAttribute="top" secondItem="NN3-nH-ZD4" secondAttribute="bottom" constant="15" id="w3q-rC-EN6"/>
                             <constraint firstItem="0On-aj-ioV" firstAttribute="top" secondItem="uk5-Dg-rBZ" secondAttribute="bottom" constant="20" id="wYh-gs-r9N"/>
+                            <constraint firstItem="cYO-LL-5OE" firstAttribute="top" secondItem="Edh-kQ-wS8" secondAttribute="bottom" constant="25" id="wc1-Dz-45I"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="groupname" destination="NN3-nH-ZD4" id="t1K-FN-ukQ"/>
                         <outlet property="tableview" destination="uk5-Dg-rBZ" id="ShP-LN-ZNJ"/>
                         <outlet property="textView" destination="nVe-FA-rzS" id="CTH-qM-yo2"/>
                     </connections>

@@ -41,7 +41,7 @@ class ManuallyAddViewController: BaseViewController, UITextFieldDelegate {
             self.present(alert, animated: true, completion: nil)
         }
         else {
-            let currentUser = User(firstName: firstName.text!, lastName: lastName.text!, phoneNumber: getPhoneNumber(), index: userGroup.users.count)
+            let currentUser = User(firstName: firstName.text!, lastName: lastName.text!, phoneNumber: getPhoneNumber())
 
             userGroup.users.append(currentUser)
             firstName.text = ""

@@ -11,15 +11,18 @@ import UIKit
 class UserGroupTableViewCell: UITableViewCell {
 
     var user: User = User()
+    var index: Int = 0
     var delegate: FinalizedGroupViewController = FinalizedGroupViewController()
     
     @IBOutlet weak var phoneNumber: UILabel!
     @IBOutlet weak var name: UILabel!
     
     @IBAction func deletePressed(_ sender: Any) {
-        userGroup.users.remove(at: user.index)
+        userGroup.users.remove(at: index)
         delegate.tableview.reloadData()
     }
+    
+    
     
     
     func setupCell() {
