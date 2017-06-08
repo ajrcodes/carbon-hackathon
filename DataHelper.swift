@@ -9,6 +9,12 @@
 import UIKit
 import CoreData
 
+extension String {
+    func removingWhitespaces() -> String {
+        return components(separatedBy: .whitespaces).joined()
+    }
+}
+
 class DataHelper {
     
     // MARK: - Save data

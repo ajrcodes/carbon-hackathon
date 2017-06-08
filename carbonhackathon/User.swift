@@ -23,9 +23,9 @@ class User: NSObject {
     }
     
     init(firstName: String, lastName: String, phoneNumber: String) {
-        self.firstName = firstName
-        self.lastName = lastName
-        self.phoneNumber = phoneNumber
+        self.firstName = firstName.removingWhitespaces()
+        self.lastName = lastName.removingWhitespaces()
+        self.phoneNumber = phoneNumber.removingWhitespaces()
     }
     
     

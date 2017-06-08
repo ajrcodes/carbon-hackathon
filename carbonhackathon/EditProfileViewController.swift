@@ -29,12 +29,12 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate {
             self.present(alert, animated: true, completion: nil)
         }
         else {
-            // TODO: REMOVE OLD USER
+            // REMOVE OLD USER — there's safer ways to do this, don't delete yourself
+            userGroup.users.remove(at: 0)
             
             // create and add user object to global list
             let currentUser = User(firstName: firstName.text!, lastName: lastName.text!, phoneNumber: getPhoneNumber())
-
-            userGroup.users.append(currentUser)
+            userGroup.users.insert(currentUser, at: 0)
             
             // save defaults in UserDefaults for future application launches
             UserDefaults.standard.set(firstName.text!, forKey: "firstName")
@@ -76,19 +76,19 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         // Check to see which text field triggered the event
         if textField.tag == 1 {
-            guard let text = phoneNum1.text else { return true}
+            guard let text = phoneNum1.text else { return true }
             let newLength = text.characters.count + string.characters.count - range.length
             return newLength <= 3
         }
         
         if textField.tag == 2 {
-            guard let text = phoneNum2.text else { return true}
+            guard let text = phoneNum2.text else { return true }
             let newLength = text.characters.count + string.characters.count - range.length
             return newLength <= 3
         }
         
         if textField.tag == 3 {
-            guard let text = phoneNum3.text else { return true}
+            guard let text = phoneNum3.text else { return true }
             let newLength = text.characters.count + string.characters.count - range.length
             return newLength <= 4
         }

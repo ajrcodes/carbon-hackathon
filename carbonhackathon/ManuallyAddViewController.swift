@@ -42,8 +42,8 @@ class ManuallyAddViewController: BaseViewController, UITextFieldDelegate {
         }
         else {
             let currentUser = User(firstName: firstName.text!, lastName: lastName.text!, phoneNumber: getPhoneNumber())
-
             userGroup.users.append(currentUser)
+            
             firstName.text = ""
             lastName.text = ""
             phoneNum1.text = ""
@@ -53,6 +53,10 @@ class ManuallyAddViewController: BaseViewController, UITextFieldDelegate {
         
     }
     
+    @IBAction func finishButtonPressed(_ sender: Any) {
+        addAnother("No sender")
+        performSegue(withIdentifier: "showFinalize", sender: nil)
+    }
     
     // MARK: - Lifecycle
     

@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class UserGroupTableViewCell: UITableViewCell {
 
     var user: User = User()
@@ -23,11 +24,18 @@ class UserGroupTableViewCell: UITableViewCell {
     }
     
     
-    
+    // MARK: - Lifecycle
     
     func setupCell() {
         name.text = user.firstName + " " + user.lastName
-        phoneNumber.text = user.phoneNumber
+        phoneNumber.text = formatPhoneNum(phoneNum: user.phoneNumber)
+    }
+    
+    func formatPhoneNum(phoneNum: String) -> String {
+        var newString = user.phoneNumber
+        newString.insert("-", at: newString.index(newString.startIndex, offsetBy: 3))
+        newString.insert("-", at: newString.index(newString.startIndex, offsetBy: 7))
+        return newString
     }
     
     override func awakeFromNib() {
