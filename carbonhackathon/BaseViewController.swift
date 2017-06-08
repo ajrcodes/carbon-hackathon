@@ -36,6 +36,12 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
             self.openViewControllerBasedOnIdentifier("manuallyAdd")
             
             break
+        case 2:
+            print("Show Previous Groups\n", terminator: "")
+            
+            self.openViewControllerBasedOnIdentifier("showGroups")
+            
+            break
         default:
             print("default\n", terminator: "")
         }

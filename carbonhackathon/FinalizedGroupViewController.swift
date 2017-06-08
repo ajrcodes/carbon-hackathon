@@ -39,6 +39,23 @@ class FinalizedGroupViewController: UIViewController, UITableViewDelegate, UITab
     
     // MARK: - Lifecycle
     
+    func createGroupStruct() -> Group {
+        let groupToSave: Group = Group(name: "", descrip: "")
+        
+        groupToSave.users = userGroup.users
+        
+        // set group name to time it was saved
+        let formatter = DateFormatter()
+        formatter.dateStyle = .long
+        formatter.timeStyle = .long
+        let timeString = formatter.string(from: Date())
+        groupToSave.name = timeString
+        
+        groupToSave.descrip = textView.text
+        
+        return groupToSave
+    }
+    
     func tableViewSetup() {
         tableview.delegate = self
         tableview.dataSource = self
@@ -147,6 +164,7 @@ class FinalizedGroupViewController: UIViewController, UITableViewDelegate, UITab
                 if let responseJSON = responseJSON as? [String: Any] {
                     if(responseJSON["success"] as! Bool){
                         print("success")
+                        _ = DataHelper.saveGroupToCoreData(group: self.createGroupStruct())
                         self.dismiss(animated: false, completion: nil)
                     }
                     else{

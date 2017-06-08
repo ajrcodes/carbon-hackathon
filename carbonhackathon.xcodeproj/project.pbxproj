@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		882951031EE98D69001203AA /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882951021EE98D69001203AA /* UserTableViewCell.swift */; };
+		882951051EE99109001203AA /* ShowUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882951041EE99109001203AA /* ShowUsersViewController.swift */; };
 		8869E08D1EE85FCE00C44B00 /* Optimist_Bd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8869E0831EE85FCE00C44B00 /* Optimist_Bd.ttf */; };
 		8869E08E1EE85FCE00C44B00 /* Optimist_BdIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8869E0841EE85FCE00C44B00 /* Optimist_BdIt.ttf */; };
 		8869E08F1EE85FCE00C44B00 /* Optimist_It.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8869E0851EE85FCE00C44B00 /* Optimist_It.ttf */; };
@@ -59,6 +61,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		882951021EE98D69001203AA /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		882951041EE99109001203AA /* ShowUsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowUsersViewController.swift; sourceTree = "<group>"; };
 		8869E0831EE85FCE00C44B00 /* Optimist_Bd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Optimist_Bd.ttf; sourceTree = "<group>"; };
 		8869E0841EE85FCE00C44B00 /* Optimist_BdIt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Optimist_BdIt.ttf; sourceTree = "<group>"; };
 		8869E0851EE85FCE00C44B00 /* Optimist_It.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Optimist_It.ttf; sourceTree = "<group>"; };
@@ -156,6 +160,7 @@
 				8869E0A31EE8728100C44B00 /* AddNearbyTableViewCell.swift */,
 				8869E0A51EE8729A00C44B00 /* UserGroupTableViewCell.swift */,
 				88C4A1161EE9805500310A6D /* GroupTableViewCell.swift */,
+				882951021EE98D69001203AA /* UserTableViewCell.swift */,
 			);
 			name = Views;
 			path = ..;
@@ -170,6 +175,7 @@
 				8869E0AB1EE87CB300C44B00 /* ManuallyAddViewController.swift */,
 				8869E0AF1EE8843400C44B00 /* FinalizedGroupViewController.swift */,
 				88C4A1141EE9802100310A6D /* ShowGroupsViewController.swift */,
+				882951041EE99109001203AA /* ShowUsersViewController.swift */,
 				8869E0B51EE8B3C000C44B00 /* Slide Menu */,
 			);
 			name = Controllers;
@@ -399,12 +405,14 @@
 				8869E0B41EE8AD5200C44B00 /* MenuViewController.swift in Sources */,
 				8869E0AC1EE87CB300C44B00 /* ManuallyAddViewController.swift in Sources */,
 				88C4A1171EE9805500310A6D /* GroupTableViewCell.swift in Sources */,
+				882951051EE99109001203AA /* ShowUsersViewController.swift in Sources */,
 				88C4A1151EE9802100310A6D /* ShowGroupsViewController.swift in Sources */,
 				8869E0C51EE9069D00C44B00 /* DataHelper.swift in Sources */,
 				8869E0C31EE905F500C44B00 /* CoreData.xcdatamodeld in Sources */,
 				8899B6521EE85019000ED279 /* ViewController.swift in Sources */,
 				8869E0B01EE8843400C44B00 /* FinalizedGroupViewController.swift in Sources */,
 				8869E0AE1EE882D300C44B00 /* AddNearByViewController.swift in Sources */,
+				882951031EE98D69001203AA /* UserTableViewCell.swift in Sources */,
 				8869E0B31EE8AD5200C44B00 /* BaseViewController.swift in Sources */,
 				8869E0A61EE8729A00C44B00 /* UserGroupTableViewCell.swift in Sources */,
 				8869E0BA1EE8BC8A00C44B00 /* EditProfileViewController.swift in Sources */,

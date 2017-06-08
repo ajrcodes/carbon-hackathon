@@ -26,7 +26,7 @@ class GroupTableViewCell: UITableViewCell {
     // MARK: - Lifecycle
     
     func setupCell() {
-        groupName.text = "Group created on " + group.name
+        groupName.text = group.name
         groupDescription.text = group.descrip
     }
     

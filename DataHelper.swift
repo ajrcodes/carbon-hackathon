@@ -26,13 +26,7 @@ class DataHelper {
         }
         let managedContext = appDelegate.persistentContainer.viewContext
         let groupEntity = UserGroupEntity(context: managedContext)
-        // Set groupname to random num
-        let formatter = DateFormatter()
-        formatter.dateStyle = .long
-        formatter.timeStyle = .full
-        let timeString = formatter.string(from: Date())
-        let nameAsString:String = timeString //string works too
-        groupEntity.name = nameAsString
+        groupEntity.name = group.name
         groupEntity.desc = group.descrip
         
         // 2 - Add users to group relationship
@@ -75,9 +69,46 @@ class DataHelper {
     }
     
     
-    // MARK: - Store data
+    // MARK: - Get data
     
     class func retrieveGroupsFromCoreData() -> [Group] {
+        //1 - setup context
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return []
+        }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        //2 - make fetch request
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "UserGroupEntity")
+        var fetchArray: [NSManagedObject] = []
+        do {
+            fetchArray = try managedContext.fetch(fetchRequest)
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+        
+        //3 - translate fetch request into array of structs
+        var groups: [Group] = []
+        
+        for group in fetchArray {
+            let object = group as! UserGroupEntity
+            // fetch related users for the group
+            var users: [User] = []
+            for user in object.hasUser! {
+                let userEntity = user as! UserEntity
+                let userStruct = User(firstName: userEntity.fname!, lastName: userEntity.lname!, phoneNumber: userEntity.phoneNum!)
+                users.append(userStruct)
+            }
+            // then translate the CoreData entity into a struct we can use
+            let groupStruct = Group(name: object.name!, descrip: object.desc!)
+            groupStruct.users = users
+            groups.append(groupStruct)
+        }
+        return groups
+    }
+    
+    
+    class func retrieveGroupsFromCoreData() -> Group {
         //1 - setup context
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return []

@@ -58,6 +58,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func updateArrayMenuOptions(){
         arrayMenuOptions.append(["title":"Profile", "icon":"HomeIcon"])
         arrayMenuOptions.append(["title":"Create Group", "icon":"PlayIcon"])
+        arrayMenuOptions.append(["title":"Show Previous Groups", "icon":"PlayIcon"])
         
         tblMenuOptions.reloadData()
     }

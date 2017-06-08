@@ -13,6 +13,7 @@ class ShowGroupsViewController: UIViewController, UITableViewDelegate, UITableVi
     // MARK: - Fields
     
     var groups: [Group] = []
+    var valueToPass: Group = Group(name: "default", descrip: "default")
     
     
     // MARK: - IBOutlets
@@ -59,8 +60,28 @@ class ShowGroupsViewController: UIViewController, UITableViewDelegate, UITableVi
         cell.group = groups[indexPath.row]
         cell.delegate = self
         cell.setupCell()
+        print(groups[indexPath.row].name + groups[indexPath.row].descrip)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Get Cell Label
+        let indexPath = tableView.indexPathForSelectedRow!
+        let currentCell = tableView.cellForRow(at: indexPath)! as! GroupTableViewCell
+        
+        valueToPass = currentCell.group
+        performSegue(withIdentifier: "showUsersFromGroup", sender: nil)
+    }
+    
+    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
+        
+        if (segue.identifier == "showUsersFromGroup") {
+            // initialize new view controller and cast it as your view controller
+            var viewController = segue.destination as! ShowUsersTableViewController
+            // your new view controller should have property that will store passed value
+            
+        }
     }
 
 
