@@ -27,6 +27,9 @@
 		8869E0B41EE8AD5200C44B00 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869E0B21EE8AD5200C44B00 /* MenuViewController.swift */; };
 		8869E0B81EE8B4DE00C44B00 /* FirstUseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869E0B71EE8B4DE00C44B00 /* FirstUseViewController.swift */; };
 		8869E0BA1EE8BC8A00C44B00 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869E0B91EE8BC8A00C44B00 /* EditProfileViewController.swift */; };
+		8869E0C01EE905CB00C44B00 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8869E0BF1EE905CB00C44B00 /* CoreData.framework */; };
+		8869E0C31EE905F500C44B00 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8869E0C11EE905F500C44B00 /* CoreData.xcdatamodeld */; };
+		8869E0C51EE9069D00C44B00 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869E0C41EE9069D00C44B00 /* DataHelper.swift */; };
 		8899B6501EE85019000ED279 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8899B64F1EE85019000ED279 /* AppDelegate.swift */; };
 		8899B6521EE85019000ED279 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8899B6511EE85019000ED279 /* ViewController.swift */; };
 		8899B6551EE85019000ED279 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8899B6531EE85019000ED279 /* Main.storyboard */; };
@@ -74,6 +77,9 @@
 		8869E0B21EE8AD5200C44B00 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		8869E0B71EE8B4DE00C44B00 /* FirstUseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstUseViewController.swift; sourceTree = "<group>"; };
 		8869E0B91EE8BC8A00C44B00 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		8869E0BF1EE905CB00C44B00 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		8869E0C21EE905F500C44B00 /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
+		8869E0C41EE9069D00C44B00 /* DataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataHelper.swift; path = ../DataHelper.swift; sourceTree = "<group>"; };
 		8899B64C1EE85019000ED279 /* carbonhackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = carbonhackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8899B64F1EE85019000ED279 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8899B6511EE85019000ED279 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8869E0C01EE905CB00C44B00 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +178,14 @@
 			name = "Slide Menu";
 			sourceTree = "<group>";
 		};
+		8869E0BE1EE905CA00C44B00 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8869E0BF1EE905CB00C44B00 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8899B6431EE85019000ED279 = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +194,7 @@
 				8899B6631EE85019000ED279 /* carbonhackathonTests */,
 				8899B66E1EE85019000ED279 /* carbonhackathonUITests */,
 				8899B64D1EE85019000ED279 /* Products */,
+				8869E0BE1EE905CA00C44B00 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -200,9 +216,11 @@
 				8869E0AA1EE87C9900C44B00 /* Controllers */,
 				8899B64F1EE85019000ED279 /* AppDelegate.swift */,
 				8899B6511EE85019000ED279 /* ViewController.swift */,
+				8869E0C41EE9069D00C44B00 /* DataHelper.swift */,
 				8899B6531EE85019000ED279 /* Main.storyboard */,
 				8899B6561EE85019000ED279 /* Assets.xcassets */,
 				8899B6581EE85019000ED279 /* LaunchScreen.storyboard */,
+				8869E0C11EE905F500C44B00 /* CoreData.xcdatamodeld */,
 				8899B65B1EE85019000ED279 /* Info.plist */,
 			);
 			path = carbonhackathon;
@@ -374,6 +392,8 @@
 				8869E0A41EE8728100C44B00 /* AddNearbyTableViewCell.swift in Sources */,
 				8869E0B41EE8AD5200C44B00 /* MenuViewController.swift in Sources */,
 				8869E0AC1EE87CB300C44B00 /* ManuallyAddViewController.swift in Sources */,
+				8869E0C51EE9069D00C44B00 /* DataHelper.swift in Sources */,
+				8869E0C31EE905F500C44B00 /* CoreData.xcdatamodeld in Sources */,
 				8899B6521EE85019000ED279 /* ViewController.swift in Sources */,
 				8869E0B01EE8843400C44B00 /* FinalizedGroupViewController.swift in Sources */,
 				8869E0AE1EE882D300C44B00 /* AddNearByViewController.swift in Sources */,
@@ -538,7 +558,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = N9965BXV48;
 				INFOPLIST_FILE = carbonhackathon/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = c1.carbonhackathon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -552,7 +572,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = N9965BXV48;
 				INFOPLIST_FILE = carbonhackathon/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = c1.carbonhackathon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -654,6 +674,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8869E0C11EE905F500C44B00 /* CoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8869E0C21EE905F500C44B00 /* CoreData.xcdatamodel */,
+			);
+			currentVersion = 8869E0C21EE905F500C44B00 /* CoreData.xcdatamodel */;
+			path = CoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8899B6441EE85019000ED279 /* Project object */;
 }

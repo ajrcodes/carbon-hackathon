@@ -92,7 +92,7 @@ class FirstUseViewController: UIViewController, UITextFieldDelegate {
         phoneNum3.delegate = self
         phoneNum3.tag = 3
         super.viewDidLoad()
-
+        self.hideKeyboardWhenTappedAround()
         // Do any additional setup after loading the view.
     }
 
