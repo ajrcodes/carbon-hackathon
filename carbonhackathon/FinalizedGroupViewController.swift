@@ -33,7 +33,11 @@ class FinalizedGroupViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     @IBAction func cancelButtonPressed(_ sender: Any) {
-        
+        userGroup.users = []
+        userGroup.users.append(userGroup.defaultUser)
+        if let navController = self.navigationController {
+            navController.popViewController(animated: true)
+        }
     }
     
     
@@ -165,14 +169,27 @@ class FinalizedGroupViewController: UIViewController, UITableViewDelegate, UITab
                     if(responseJSON["success"] as! Bool){
                         print("success")
                         _ = DataHelper.saveGroupToCoreData(group: self.createGroupStruct())
+                        userGroup.users = []
+                        userGroup.users.append(userGroup.defaultUser)
                         self.dismiss(animated: false, completion: nil)
+                        if let navController = self.navigationController {
+                            navController.popViewController(animated: true)
+                        }
                     }
                     else{
                         print("fail")
+                        self.dismiss(animated: false, completion: nil)
+                        if let navController = self.navigationController {
+                            navController.popViewController(animated: true)
+                        }
                     }
                 }
                 else{
                     print("fail")
+                    self.dismiss(animated: false, completion: nil)
+                    if let navController = self.navigationController {
+                        navController.popViewController(animated: true)
+                    }
                 }
             }
             task.resume()

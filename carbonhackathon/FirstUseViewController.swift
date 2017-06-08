@@ -31,7 +31,7 @@ class FirstUseViewController: UIViewController, UITextFieldDelegate {
         else {
             // create and add user object to global list
             let currentUser = User(firstName: firstName.text!, lastName: lastName.text!, phoneNumber: getPhoneNumber())
-            
+            userGroup.defaultUser = currentUser
             userGroup.users.append(currentUser)
             
             // save defaults in UserDefaults for future application launches

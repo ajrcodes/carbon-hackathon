@@ -47,6 +47,7 @@ class Group {
 
 struct userGroup {
     // Fields
+    static var defaultUser: User = User()
     static var users: [User] = []
     static var groups: [Group] = []
 }

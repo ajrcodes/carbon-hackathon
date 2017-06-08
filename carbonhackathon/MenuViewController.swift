@@ -59,6 +59,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         arrayMenuOptions.append(["title":"Profile", "icon":"HomeIcon"])
         arrayMenuOptions.append(["title":"Create Group", "icon":"PlayIcon"])
         arrayMenuOptions.append(["title":"Show Previous Groups", "icon":"PlayIcon"])
+        arrayMenuOptions.append(["title":"Add Nearby", "icon":"PlayIcon"])
         
         tblMenuOptions.reloadData()
     }

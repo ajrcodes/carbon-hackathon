@@ -196,7 +196,7 @@
         <!--Create Group-->
         <scene sceneID="hho-73-Mjn">
             <objects>
-                <viewController id="FL4-lf-8g7" customClass="AddNearByViewController" customModule="carbonhackathon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addNearBy" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FL4-lf-8g7" customClass="AddNearByViewController" customModule="carbonhackathon" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HJB-xb-DWC"/>
                         <viewControllerLayoutGuide type="bottom" id="YGr-EM-kTL"/>
@@ -310,13 +310,12 @@
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="edit" id="UHl-LA-dAv"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="next" destination="qNh-J2-J2H" id="MeQ-lY-xqD"/>
                         <outlet property="tableview" destination="oF3-a6-LYf" id="n9y-Lb-pvZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LAG-Yg-xJ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="876" y="170"/>
+            <point key="canvasLocation" x="3377" y="1773"/>
         </scene>
         <!--Create Group-->
         <scene sceneID="4T8-rc-KF0">
@@ -496,25 +495,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0rF-dC-Fjl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3134" y="976"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="aP0-Du-P5P">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="G4L-KZ-FZp" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="IDs-b6-qf2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="FL4-lf-8g7" kind="relationship" relationship="rootViewController" id="SMy-MA-zaB"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Kxa-bQ-4pa" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="87" y="170"/>
+            <point key="canvasLocation" x="3378" y="976"/>
         </scene>
         <!--Finalize Group-->
         <scene sceneID="wP8-Di-C33">
@@ -583,7 +564,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="318" height="74.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ICON" translatesAutoresizingMaskIntoConstraints="NO" id="BH8-p7-e1Q">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WHITECIR" translatesAutoresizingMaskIntoConstraints="NO" id="BH8-p7-e1Q">
                                                     <rect key="frame" x="13" y="12" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="a00-LO-2VH"/>
@@ -597,7 +578,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="973-123-4567" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZw-gG-nN0">
-                                                    <rect key="frame" x="78" y="35.5" width="82" height="18.5"/>
+                                                    <rect key="frame" x="78" y="35" width="82" height="18.5"/>
                                                     <fontDescription key="fontDescription" name="Optimist-Regular" family="Optimist" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -616,19 +597,29 @@
                                                         <action selector="deletePressed:" destination="xOM-wV-6uo" eventType="touchUpInside" id="R1X-RM-RX2"/>
                                                     </connections>
                                                 </button>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BLACKCIR" translatesAutoresizingMaskIntoConstraints="NO" id="eGH-gM-Dqh">
+                                                    <rect key="frame" x="13" y="12" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="a97-Ci-Fep"/>
+                                                        <constraint firstAttribute="height" constant="50" id="fNF-un-0FO"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="gl9-cm-OTZ" firstAttribute="top" secondItem="BH8-p7-e1Q" secondAttribute="top" id="9ko-bA-eUQ"/>
+                                                <constraint firstItem="eGH-gM-Dqh" firstAttribute="leading" secondItem="ZOm-b6-uDI" secondAttribute="leadingMargin" constant="5" id="DHV-fl-0Ls"/>
                                                 <constraint firstItem="BH8-p7-e1Q" firstAttribute="leading" secondItem="ZOm-b6-uDI" secondAttribute="leadingMargin" constant="5" id="Hge-rs-ZiZ"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="J0A-Jr-q5I" secondAttribute="trailing" constant="14" id="Hl2-2L-09r"/>
                                                 <constraint firstItem="BH8-p7-e1Q" firstAttribute="centerY" secondItem="ZOm-b6-uDI" secondAttribute="centerY" id="Qgl-xm-XaG"/>
                                                 <constraint firstItem="J0A-Jr-q5I" firstAttribute="centerY" secondItem="ZOm-b6-uDI" secondAttribute="centerY" id="TXc-ox-7S5"/>
                                                 <constraint firstItem="KZw-gG-nN0" firstAttribute="leading" secondItem="gl9-cm-OTZ" secondAttribute="leading" id="beU-5Z-vcA"/>
                                                 <constraint firstItem="KZw-gG-nN0" firstAttribute="top" secondItem="gl9-cm-OTZ" secondAttribute="bottom" constant="5" id="fOl-6V-Owc"/>
+                                                <constraint firstItem="eGH-gM-Dqh" firstAttribute="top" secondItem="ZOm-b6-uDI" secondAttribute="topMargin" constant="4" id="h45-ok-thA"/>
                                                 <constraint firstItem="gl9-cm-OTZ" firstAttribute="leading" secondItem="BH8-p7-e1Q" secondAttribute="trailing" constant="15" id="w7y-1s-ezJ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="icon" destination="BH8-p7-e1Q" id="62Y-hP-UxG"/>
                                             <outlet property="name" destination="gl9-cm-OTZ" id="GQi-uu-WJu"/>
                                             <outlet property="phoneNumber" destination="KZw-gG-nN0" id="6GJ-cu-vfo"/>
                                         </connections>
@@ -675,7 +666,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ltd-uZ-wv1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4013.5999999999999" y="975.56221889055485"/>
+            <point key="canvasLocation" x="4473" y="976"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="kl9-Sv-EWn">
@@ -778,6 +769,7 @@
                         <segue destination="kno-zn-fpo" kind="relationship" relationship="rootViewController" id="hvO-HR-Yf7"/>
                         <segue destination="gGA-A4-b9i" kind="show" id="1IA-Dq-ymW"/>
                         <segue destination="pEH-Gf-krf" kind="show" id="DiD-Bo-Czj"/>
+                        <segue destination="FL4-lf-8g7" kind="show" id="zPl-Jc-MBY"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q1y-d6-NAo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -955,7 +947,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h1Z-as-sRu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3134" y="1759"/>
+            <point key="canvasLocation" x="2286" y="1812"/>
         </scene>
         <!--Show Groups-->
         <scene sceneID="WH6-fP-79l">
@@ -1014,7 +1006,6 @@
                                             <outlet property="groupDescription" destination="nJT-Xb-CMs" id="PQq-y5-8nu"/>
                                             <outlet property="groupName" destination="OsN-fG-1ZW" id="2B0-BA-OzE"/>
                                             <outlet property="icon" destination="4y6-bN-CIJ" id="MKb-IF-DvF"/>
-                                            <segue destination="7T0-bg-xcM" kind="show" identifier="showUsersFromGroup" id="5gh-50-BkT"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1052,6 +1043,7 @@
                     </view>
                     <connections>
                         <outlet property="tableview" destination="Fm8-4O-sYR" id="gtO-BF-Fkh"/>
+                        <segue destination="7T0-bg-xcM" kind="show" identifier="showUsersInGroup" id="dPH-ya-ka6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nT8-Iw-lMH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1112,9 +1104,6 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="groupDescription" destination="kZQ-Ol-kYO" id="tzH-X7-lKu"/>
-                                            <outlet property="groupName" destination="OZH-T6-FKN" id="FPK-xb-4Vw"/>
-                                            <outlet property="icomn" destination="Ocw-SM-lns" id="IF2-MW-C49"/>
                                             <outlet property="icon" destination="Ocw-SM-lns" id="2ft-bb-HDz"/>
                                             <outlet property="userName" destination="OZH-T6-FKN" id="wVH-EZ-eH0"/>
                                             <outlet property="userNum" destination="kZQ-Ol-kYO" id="ONj-S8-HHz"/>
@@ -1159,8 +1148,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="BLACKCIR" width="300" height="300"/>
         <image name="FINALLOGO" width="1000" height="250"/>
         <image name="ICON" width="400" height="450"/>
+        <image name="WHITECIR" width="300" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="3jd-Fc-XtH"/>

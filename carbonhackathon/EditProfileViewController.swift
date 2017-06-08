@@ -34,6 +34,7 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate {
             
             // create and add user object to global list
             let currentUser = User(firstName: firstName.text!, lastName: lastName.text!, phoneNumber: getPhoneNumber())
+            userGroup.defaultUser = currentUser
             userGroup.users.insert(currentUser, at: 0)
             
             // save defaults in UserDefaults for future application launches

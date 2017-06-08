@@ -17,6 +17,8 @@ class UserGroupTableViewCell: UITableViewCell {
     
     @IBOutlet weak var phoneNumber: UILabel!
     @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var icon: UIImageView!
+   
     
     @IBAction func deletePressed(_ sender: Any) {
         userGroup.users.remove(at: index)

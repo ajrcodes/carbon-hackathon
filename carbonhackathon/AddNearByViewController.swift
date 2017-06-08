@@ -13,8 +13,6 @@ class AddNearByViewController: UIViewController {
     
     @IBOutlet weak var tableview: UITableView!
     
-    
-    
 
     override func viewDidLoad() {
         self.hideKeyboardWhenTappedAround()

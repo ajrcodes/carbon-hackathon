@@ -42,6 +42,12 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
             self.openViewControllerBasedOnIdentifier("showGroups")
             
             break
+        case 3:
+            print("Add Nearby\n", terminator: "")
+            
+            self.openViewControllerBasedOnIdentifier("addNearBy")
+            
+            break
         default:
             print("default\n", terminator: "")
         }

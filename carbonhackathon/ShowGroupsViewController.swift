@@ -68,13 +68,12 @@ class ShowGroupsViewController: UIViewController, UITableViewDelegate, UITableVi
         // Get Cell Label
         let indexPath = tableView.indexPathForSelectedRow!
         let currentCell = tableView.cellForRow(at: indexPath)! as! GroupTableViewCell
-        
         valueToPass = currentCell.group
+        performSegue(withIdentifier: "showUsersInGroup", sender: nil)
     }
     
-    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
-        
-        if (segue.identifier == "showUsersFromGroup") {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "showUsersInGroup") {
             // initialize new view controller and cast it as your view controller
             let viewController = segue.destination as! ShowUsersViewController
             // your new view controller should have property that will store passed value
