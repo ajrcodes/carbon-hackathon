@@ -27,18 +27,16 @@ class AddNearbyTableViewCell: UITableViewCell {
     // MARK: - IBActions
     
     @IBAction func selectorPressed(_ sender: Any) {
-        
-        if !addedToGroup {
-            // Reflect status in label
-            selectorIcon.titleLabel?.text = "-"
-            // Add user to group
-            userGroup.users.append(user)
-        } else {
-            // Reflect status in label
-            selectorIcon.titleLabel?.text = "+"
-            // Remove user from group
+        if addedToGroup {
+            addedToGroup = false
+            selectorIcon.setTitle("+", for: .normal)
+            self.backgroundColor = UIColor.white
         }
-        
+        else {
+            addedToGroup = true
+            selectorIcon.setTitle("-", for: .normal)
+            self.backgroundColor = UIColor.green
+        }
     }
     
     

@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>Quircl</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -20,6 +22,10 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Quircle needs your location to search for nearby users</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Quircle needs your location to search for nearby users</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Optimist_Bd.ttf</string>
@@ -37,8 +43,6 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
-	<key>CFBundleDisplayName</key>
-	<string>Quircl</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
@@ -56,9 +60,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Quircle needs your location to search for nearby users</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Quircle needs your location to search for nearby users</string>
 </dict>
 </plist>

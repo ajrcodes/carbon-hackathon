@@ -193,7 +193,7 @@
             </objects>
             <point key="canvasLocation" x="1449" y="976"/>
         </scene>
-        <!--Create Group-->
+        <!--Add Nearby-->
         <scene sceneID="hho-73-Mjn">
             <objects>
                 <viewController storyboardIdentifier="addNearBy" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FL4-lf-8g7" customClass="AddNearByViewController" customModule="carbonhackathon" customModuleProvider="target" sceneMemberID="viewController">
@@ -205,30 +205,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Create Group" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kZ3-kz-zCD">
-                                <rect key="frame" x="129" y="28" width="117" height="26"/>
-                                <fontDescription key="fontDescription" name="Optimist-Regular" family="Optimist" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Nearby" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKV-CU-BsT">
-                                <rect key="frame" x="41" y="89" width="83" height="21"/>
-                                <fontDescription key="fontDescription" name="Optimist-Regular" family="Optimist" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNh-J2-J2H">
-                                <rect key="frame" x="169" y="549" width="36" height="33"/>
-                                <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="16"/>
-                                <state key="normal" title="Next">
-                                    <color key="titleColor" red="0.32249286770820618" green="0.58990800380706787" blue="0.83537161350250244" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ICON" translatesAutoresizingMaskIntoConstraints="NO" id="f4p-w0-reB">
+                                <rect key="frame" x="137.5" y="89" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="b2z-70-BDd"/>
+                                    <constraint firstAttribute="height" constant="100" id="nIS-J3-RsQ"/>
+                                </constraints>
+                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oF3-a6-LYf">
-                                <rect key="frame" x="41" y="135" width="293" height="400"/>
+                                <rect key="frame" x="41" y="214" width="293" height="350"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="400" id="AFW-ez-lrC"/>
+                                    <constraint firstAttribute="height" constant="350" id="AFW-ez-lrC"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="addNearby" rowHeight="75" id="gzb-Yp-jNy" customClass="AddNearbyTableViewCell" customModule="carbonhackathon" customModuleProvider="target">
@@ -288,29 +276,51 @@
                                             <outlet property="name" destination="f4Z-PC-Znx" id="9B8-CP-rd9"/>
                                             <outlet property="phoneNumber" destination="fRv-UA-eOi" id="6YT-i7-B44"/>
                                             <outlet property="selectorIcon" destination="JRn-4I-duO" id="j1V-XD-z0S"/>
-                                            <outlet property="selectorPressed" destination="JRn-4I-duO" id="87Z-k3-RFc"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pR3-Bd-L2n">
+                                <rect key="frame" x="285" y="579" width="49" height="33"/>
+                                <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="16"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.8381381631" green="0.34255543350000001" blue="0.27056044340000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="h1w-qM-bvm" eventType="touchUpInside" id="VLg-mA-HFL"/>
+                                    <action selector="cancelSelectedPressed:" destination="FL4-lf-8g7" eventType="touchUpInside" id="eYr-ce-pDU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6SD-Tn-Wwj">
+                                <rect key="frame" x="41" y="579" width="99" height="33"/>
+                                <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="16"/>
+                                <state key="normal" title="Add Selected">
+                                    <color key="titleColor" red="0.32249286770000002" green="0.58990800379999997" blue="0.8353716135" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="addSelectedPressed:" destination="FL4-lf-8g7" eventType="touchUpInside" id="TW6-j1-KNg"/>
+                                    <action selector="createButtonPressed:" destination="h1w-qM-bvm" eventType="touchUpInside" id="CkF-ML-edY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="oF3-a6-LYf" firstAttribute="leading" secondItem="AKV-CU-BsT" secondAttribute="leading" id="6a8-yl-cF6"/>
+                            <constraint firstItem="6SD-Tn-Wwj" firstAttribute="top" secondItem="oF3-a6-LYf" secondAttribute="bottom" constant="15" id="4j8-oT-XMs"/>
+                            <constraint firstItem="f4p-w0-reB" firstAttribute="top" secondItem="HJB-xb-DWC" secondAttribute="bottom" constant="25" id="5Fy-Wu-JwJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="oF3-a6-LYf" secondAttribute="trailing" constant="25" id="7DX-MQ-nGV"/>
-                            <constraint firstItem="YGr-EM-kTL" firstAttribute="top" secondItem="qNh-J2-J2H" secondAttribute="bottom" constant="85" id="9pa-S4-pAc"/>
-                            <constraint firstItem="AKV-CU-BsT" firstAttribute="top" secondItem="HJB-xb-DWC" secondAttribute="bottom" constant="25" id="Pnb-A7-4lp"/>
-                            <constraint firstItem="qNh-J2-J2H" firstAttribute="centerX" secondItem="Mt3-RP-9A5" secondAttribute="centerX" id="UJN-qh-M0B"/>
-                            <constraint firstItem="oF3-a6-LYf" firstAttribute="top" secondItem="AKV-CU-BsT" secondAttribute="bottom" constant="25" id="Wdz-3S-CS7"/>
-                            <constraint firstItem="kZ3-kz-zCD" firstAttribute="top" secondItem="HJB-xb-DWC" secondAttribute="bottom" constant="50" id="bjU-FU-l6T"/>
-                            <constraint firstItem="AKV-CU-BsT" firstAttribute="leading" secondItem="Mt3-RP-9A5" secondAttribute="leadingMargin" constant="25" id="doJ-xN-sAP"/>
+                            <constraint firstItem="pR3-Bd-L2n" firstAttribute="trailing" secondItem="oF3-a6-LYf" secondAttribute="trailing" id="cro-h0-XUS"/>
+                            <constraint firstItem="6SD-Tn-Wwj" firstAttribute="leading" secondItem="oF3-a6-LYf" secondAttribute="leading" id="hen-wR-bYX"/>
+                            <constraint firstItem="pR3-Bd-L2n" firstAttribute="centerY" secondItem="6SD-Tn-Wwj" secondAttribute="centerY" id="nWY-S7-gXP"/>
+                            <constraint firstItem="oF3-a6-LYf" firstAttribute="leading" secondItem="Mt3-RP-9A5" secondAttribute="leadingMargin" constant="25" id="r3D-nY-sLx"/>
+                            <constraint firstItem="f4p-w0-reB" firstAttribute="centerX" secondItem="Mt3-RP-9A5" secondAttribute="centerX" id="wEP-TA-Oht"/>
+                            <constraint firstItem="oF3-a6-LYf" firstAttribute="top" secondItem="f4p-w0-reB" secondAttribute="bottom" constant="25" id="xT9-Ax-nSo"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Create Group" id="nNb-hl-EQp">
+                    <navigationItem key="navigationItem" title="Add Nearby" id="nNb-hl-EQp">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="edit" id="UHl-LA-dAv"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="tableview" destination="oF3-a6-LYf" id="n9y-Lb-pvZ"/>
+                        <outlet property="tableview" destination="oF3-a6-LYf" id="xS4-tM-AeH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LAG-Yg-xJ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -477,7 +487,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="W69-eh-loZ" secondAttribute="trailing" constant="25" id="yZt-KH-hyg"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Create Group" id="G58-cQ-4QQ">
+                    <navigationItem key="navigationItem" title="Add Manually" id="G58-cQ-4QQ">
                         <barButtonItem key="rightBarButtonItem" title="Finish" id="ELA-Lo-wBe">
                             <connections>
                                 <action selector="finishButtonPressed:" destination="kno-zn-fpo" id="0l7-th-GNv"/>
@@ -770,6 +780,7 @@
                         <segue destination="gGA-A4-b9i" kind="show" id="1IA-Dq-ymW"/>
                         <segue destination="pEH-Gf-krf" kind="show" id="DiD-Bo-Czj"/>
                         <segue destination="FL4-lf-8g7" kind="show" id="zPl-Jc-MBY"/>
+                        <segue destination="8Eg-2v-t3W" kind="show" id="ZDl-3X-D41"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q1y-d6-NAo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -939,6 +950,7 @@
                     <navigationItem key="navigationItem" title="Edit Profile" id="VPe-cW-XZb"/>
                     <connections>
                         <outlet property="firstName" destination="Wif-7H-gxY" id="edj-tl-eBe"/>
+                        <outlet property="icon" destination="HSA-yg-lqe" id="UCi-j1-6fg"/>
                         <outlet property="lastName" destination="hgZ-ec-i3g" id="QpO-64-Bky"/>
                         <outlet property="phoneNum1" destination="h6K-Pc-j4s" id="1g1-4Z-G8K"/>
                         <outlet property="phoneNum2" destination="1le-Bu-VOl" id="gHs-jN-Bj8"/>
@@ -1057,7 +1069,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nT8-Iw-lMH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3133.5999999999999" y="198.35082458770617"/>
+            <point key="canvasLocation" x="3111" y="197"/>
         </scene>
         <!--Show Users-->
         <scene sceneID="Ii3-3p-XSc">
@@ -1164,6 +1176,61 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uhO-tR-BRY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4014" y="198"/>
+        </scene>
+        <!--Create Group-->
+        <scene sceneID="CoI-sr-WUZ">
+            <objects>
+                <viewController title="Create Group" automaticallyAdjustsScrollViewInsets="NO" id="8Eg-2v-t3W" customClass="ShowGroupsViewController" customModule="carbonhackathon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tAD-Or-tbB"/>
+                        <viewControllerLayoutGuide type="bottom" id="E75-61-kfx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TJF-6g-ScB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ICON" translatesAutoresizingMaskIntoConstraints="NO" id="5WX-mK-fnx">
+                                <rect key="frame" x="137" y="89" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="D8Y-ef-mHg"/>
+                                    <constraint firstAttribute="height" constant="100" id="lEu-JC-rpY"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RxC-bX-hkf">
+                                <rect key="frame" x="119" y="239" width="137" height="33"/>
+                                <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="16"/>
+                                <state key="normal" title="Find Nearby Users">
+                                    <color key="titleColor" red="0.32249286770000002" green="0.58990800379999997" blue="0.8353716135" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="createButtonPressed:" destination="h1w-qM-bvm" eventType="touchUpInside" id="baa-8w-LrT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZ2-P8-vuQ">
+                                <rect key="frame" x="113" y="322" width="149" height="33"/>
+                                <fontDescription key="fontDescription" name="Optimist-Bold" family="Optimist" pointSize="16"/>
+                                <state key="normal" title="Add Users Manually">
+                                    <color key="titleColor" red="0.32249286770000002" green="0.58990800379999997" blue="0.8353716135" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="createButtonPressed:" destination="h1w-qM-bvm" eventType="touchUpInside" id="ATO-6g-ByA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5WX-mK-fnx" firstAttribute="centerX" secondItem="TJF-6g-ScB" secondAttribute="centerX" id="3B6-sj-eNU"/>
+                            <constraint firstItem="RxC-bX-hkf" firstAttribute="top" secondItem="5WX-mK-fnx" secondAttribute="bottom" constant="50" id="IEW-oc-SbG"/>
+                            <constraint firstItem="RxC-bX-hkf" firstAttribute="centerX" secondItem="TJF-6g-ScB" secondAttribute="centerX" id="dKI-VB-WuR"/>
+                            <constraint firstItem="5WX-mK-fnx" firstAttribute="top" secondItem="tAD-Or-tbB" secondAttribute="bottom" constant="25" id="eRW-YV-qkK"/>
+                            <constraint firstItem="oZ2-P8-vuQ" firstAttribute="centerX" secondItem="TJF-6g-ScB" secondAttribute="centerX" id="jPe-GP-m4t"/>
+                            <constraint firstItem="oZ2-P8-vuQ" firstAttribute="top" secondItem="RxC-bX-hkf" secondAttribute="bottom" constant="50" id="lPE-yf-wmX"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tZt-h5-kcG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1807" y="70"/>
         </scene>
     </scenes>
     <resources>

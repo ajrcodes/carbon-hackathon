@@ -9,10 +9,20 @@
 import UIKit
 import MapKit
 
-class AddNearByViewController: UIViewController {
+class AddNearByViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var usersForTable: [User] = []
+
+    @IBOutlet weak var tableview: UITableView!
+    
+    @IBAction func addSelectedPressed(_ sender: Any) {
+    }
+    
+    @IBAction func cancelSelectedPressed(_ sender: Any) {
+    }
+    
     let interval:Int = 2 // 2 seconds
     
-    @IBOutlet weak var tableview: UITableView!
     
     //var locManager = CLLocationManager()
     var currentLocation: CLLocation!
@@ -22,6 +32,7 @@ class AddNearByViewController: UIViewController {
     override func viewDidLoad() {
         self.hideKeyboardWhenTappedAround()
         super.viewDidLoad()
+        tableViewSetup()
         //locManager.requestWhenInUseAuthorization()
         
         //set timer
@@ -100,12 +111,24 @@ class AddNearByViewController: UIViewController {
                     print("success")
                     let users = responseJSON["data"] as!  [[String: Any]]
                     
-                    for user in users{
-                        //add users to table
-                        let name = user["name"] //format "firstname lastname"
-                        let number = user["number"] //format "1234567890"
+                    for userHere in users{
+                        let name = String(describing: userHere["name"]!) //format "firstname lastname"
+                        var nameArray = name.components(separatedBy: " ")
+                        let number = String(describing: userHere["number"]!) //format "1234567890"
+                        let currentUser = User(firstName: nameArray[0], lastName: nameArray[1], phoneNumber: number)
                         
-                        //add name and number here
+                        var flag = false
+                        for compareUser in self.usersForTable {
+                            if compareUser.phoneNumber == currentUser.phoneNumber {
+                                flag = true
+                            }
+                        }
+                        
+                        if !flag {
+                            self.usersForTable.append(currentUser)
+                            self.tableview.reloadData()
+                        }
+                        
                     }
                     
                 }
@@ -169,6 +192,33 @@ class AddNearByViewController: UIViewController {
         
     }
     
+    
+    // MARK: - Table view methods
+    
+    func tableViewSetup() {
+        tableview.delegate = self
+        tableview.dataSource = self
+    }
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return usersForTable.count
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "addNearby", for: indexPath) as! AddNearbyTableViewCell
+        self.tableview.rowHeight = 75
+        
+        // setup the cell to be used in the table view
+        cell.user = usersForTable[indexPath.row]
+        cell.setupCell()
+        
+        return cell
+    }
     
     
     /*
