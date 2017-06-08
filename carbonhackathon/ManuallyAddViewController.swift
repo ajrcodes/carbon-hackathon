@@ -34,28 +34,13 @@ class ManuallyAddViewController: BaseViewController, UITextFieldDelegate {
     // MARK: - IBActions
     
     @IBAction func addAnother(_ sender: Any) {
-        if firstName.text == "" || lastName.text == ""
-        || phoneNum1.text!.characters.count < 3 || phoneNum2.text!.characters.count < 3 || phoneNum3.text!.characters.count < 4 {
-            let alert = UIAlertController(title: "Warning!", message: "Please complete all the fields", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        }
-        else {
-            let currentUser = User(firstName: firstName.text!, lastName: lastName.text!, phoneNumber: getPhoneNumber())
-            userGroup.users.append(currentUser)
-            
-            firstName.text = ""
-            lastName.text = ""
-            phoneNum1.text = ""
-            phoneNum2.text = ""
-            phoneNum3.text = ""
-        }
-        
+        addPerson()
     }
     
     @IBAction func finishButtonPressed(_ sender: Any) {
-        addAnother("No sender")
-        performSegue(withIdentifier: "showFinalize", sender: nil)
+        if addPerson() {
+            performSegue(withIdentifier: "showFinalize", sender: nil)
+        }
     }
     
     // MARK: - Lifecycle
@@ -85,6 +70,30 @@ class ManuallyAddViewController: BaseViewController, UITextFieldDelegate {
     
     func getPhoneNumber() -> String {
         return phoneNum1.text! + phoneNum2.text! + phoneNum3.text!
+    }
+    
+    func addPerson() -> Bool {
+        if firstName.text == "" && lastName.text == ""
+            && phoneNum1.text == "" && phoneNum2.text == "" && phoneNum3.text == "" {
+            return true
+        }
+        if firstName.text == "" || lastName.text == ""
+            || phoneNum1.text!.characters.count < 3 || phoneNum2.text!.characters.count < 3 || phoneNum3.text!.characters.count < 4 {
+            let alert = UIAlertController(title: "Warning!", message: "Please complete all the fields", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return false
+        } else {
+            let currentUser = User(firstName: firstName.text!, lastName: lastName.text!, phoneNumber: getPhoneNumber())
+            userGroup.users.append(currentUser)
+            
+            firstName.text = ""
+            lastName.text = ""
+            phoneNum1.text = ""
+            phoneNum2.text = ""
+            phoneNum3.text = ""
+            return true
+        }
     }
     
     override func viewDidLoad() {
