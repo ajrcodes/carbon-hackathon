@@ -56,5 +56,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Quircle needs your location to search for nearby users</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Quircle needs your location to search for nearby users</string>
 </dict>
 </plist>

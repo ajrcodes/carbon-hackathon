@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import MapKit
+var locManager = CLLocationManager()
+
 
 class FirstUseViewController: UIViewController, UITextFieldDelegate {
 
@@ -90,11 +93,14 @@ class FirstUseViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
         // Do any additional setup after loading the view.
+        print(UserDefaults.standard.bool(forKey: "hasLaunched"))
         if UserDefaults.standard.bool(forKey: "hasLaunched") {
             DispatchQueue.main.async(execute: {
                 self.performSegue(withIdentifier: "createGroup", sender: nil)
             })
         }
+        
+        locManager.requestWhenInUseAuthorization()
     }
 
     override func didReceiveMemoryWarning() {
