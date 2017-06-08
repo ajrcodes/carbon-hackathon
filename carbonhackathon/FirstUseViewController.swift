@@ -98,6 +98,9 @@ class FirstUseViewController: UIViewController, UITextFieldDelegate {
             DispatchQueue.main.async(execute: {
                 self.performSegue(withIdentifier: "createGroup", sender: nil)
             })
+        } else {
+            UserDefaults.standard.set(true, forKey: "hasLaunched")
+            UserDefaults.standard.synchronize()
         }
         
         locManager.requestWhenInUseAuthorization()

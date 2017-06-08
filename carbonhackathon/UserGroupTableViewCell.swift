@@ -31,6 +31,9 @@ class UserGroupTableViewCell: UITableViewCell {
     func setupCell() {
         name.text = user.firstName + " " + user.lastName
         phoneNumber.text = formatPhoneNum(phoneNum: user.phoneNumber)
+        icon.image = icon.image!.withRenderingMode(.alwaysTemplate)
+        icon.tintColor = .random()
+
     }
     
     func formatPhoneNum(phoneNum: String) -> String {
